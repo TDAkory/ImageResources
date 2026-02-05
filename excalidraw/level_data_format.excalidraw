@@ -1,0 +1,52 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://excalidraw.com",
+  "elements": [
+    {
+      "id": "3jHWjowi5kNTFEMJcha2S",
+      "type": "text",
+      "x": 772,
+      "y": -168.5,
+      "width": 196.92794799804688,
+      "height": 20,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "af",
+      "roundness": null,
+      "seed": 1997366653,
+      "version": 90,
+      "versionNonce": 1966231101,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1770262834479,
+      "link": null,
+      "locked": false,
+      "text": "LevelDB 数据组织方式剖析",
+      "fontSize": 16,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "LevelDB 数据组织方式剖析",
+      "autoResize": true,
+      "lineHeight": 1.25
+    }
+  ],
+  "appState": {
+    "gridSize": 20,
+    "gridStep": 5,
+    "gridModeEnabled": false,
+    "viewBackgroundColor": "#ffffff",
+    "lockedMultiSelections": {}
+  },
+  "files": {}
+}
