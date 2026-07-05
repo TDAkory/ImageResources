@@ -20,8 +20,9 @@
   * [materialization.png](AppFrameThoughts/materialization.png)
   * [process_state_model.jpg](AppFrameThoughts/process_state_model.jpg)
   * [push-pull-model.png](AppFrameThoughts/push-pull-model.png)
-  * [rocksdb.jpg](AppFrameThoughts/rocksdb.jpg)
-  * [rocksdb_memtable_struct_compare.png](AppFrameThoughts/rocksdb_memtable_struct_compare.png)
+  * [rocksdb]
+    * [rocksdb.jpg](AppFrameThoughts/rocksdb/rocksdb.jpg)
+    * [rocksdb_memtable_struct_compare.png](AppFrameThoughts/rocksdb/rocksdb_memtable_struct_compare.png)
   * [uml_grammer.png](AppFrameThoughts/uml_grammer.png)
   * [volcano.png](AppFrameThoughts/volcano.png)
 * [CSFundations]

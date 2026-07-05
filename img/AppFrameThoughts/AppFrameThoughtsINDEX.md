@@ -12,7 +12,8 @@
 * [materialization.png](materialization.png)
 * [process_state_model.jpg](process_state_model.jpg)
 * [push-pull-model.png](push-pull-model.png)
-* [rocksdb.jpg](rocksdb.jpg)
-* [rocksdb_memtable_struct_compare.png](rocksdb_memtable_struct_compare.png)
+* [rocksdb]
+  * [rocksdb.jpg](rocksdb/rocksdb.jpg)
+  * [rocksdb_memtable_struct_compare.png](rocksdb/rocksdb_memtable_struct_compare.png)
 * [uml_grammer.png](uml_grammer.png)
 * [volcano.png](volcano.png)
