@@ -1,0 +1,15 @@
+# Table of contents
+
+* [../ (AppFrameThoughts)](../ZImgAppFrameThoughtsINDEX.md)
+* [duckdb_block.png](duckdb_block.png)
+* [duckdb_databaseheader.png](duckdb_databaseheader.png)
+* [duckdb_file_format.png](duckdb_file_format.png)
+* [duckdb_index.png](duckdb_index.png)
+* [duckdb_mainheader.png](duckdb_mainheader.png)
+* [duckdb_meta.png](duckdb_meta.png)
+* [duckdb_meta_catalog.png](duckdb_meta_catalog.png)
+* [duckdb_meta_catalogentry.png](duckdb_meta_catalogentry.png)
+* [duckdb_meta_freelist.png](duckdb_meta_freelist.png)
+* [duckdb_metachain.png](duckdb_metachain.png)
+* [duckdb_table.png](duckdb_table.png)
+* [duckdb_wal.png](duckdb_wal.png)
