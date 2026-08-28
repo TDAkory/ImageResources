@@ -1276,8 +1276,8 @@
     {
       "id": "555vsbwt4wpA7iEsUzLJu",
       "type": "text",
-      "x": 7051.092030843102,
-      "y": -667.4059244791667,
+      "x": 6729.832265218102,
+      "y": -338.57779947916674,
       "width": 431.19940185546875,
       "height": 480,
       "angle": 0,
@@ -1293,11 +1293,16 @@
       "index": "b41",
       "roundness": null,
       "seed": 1950586937,
-      "version": 198,
-      "versionNonce": 1665407089,
+      "version": 249,
+      "versionNonce": 1547555359,
       "isDeleted": false,
-      "boundElements": [],
-      "updated": 1787193801370,
+      "boundElements": [
+        {
+          "id": "S9uVlEixXluA6IPYAfJ__",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1787886136450,
       "link": null,
       "locked": false,
       "text": "+===============================================+\n| SSTable file                                  |\n+===============================================+\n| Metric Block #0                               |\n|   - column layout or PAX layout               |\n|   - metric footer                             |\n+-----------------------------------------------+\n| Metric Block #1                               |\n|   - column layout or PAX layout               |\n|   - metric footer                             |\n+-----------------------------------------------+\n| ...                                           |\n+-----------------------------------------------+\n| optional EC padding after metrics             |\n+-----------------------------------------------+\n| Metric Index                                  |\n|   metric name -> metric block offset / size   |\n+-----------------------------------------------+\n| optional EC padding before SSTable footer     |\n+-----------------------------------------------+\n| SSTable Footer                                |\n|   protobuf SSTableFooter                      |\n|   crc + size + version + magic                |\n+===============================================+",
@@ -2480,82 +2485,10 @@
       "moveMidPointsWithElement": false
     },
     {
-      "id": "X51QmUdhmBpD6E-f_Chmp",
-      "type": "text",
-      "x": 6085.512846447174,
-      "y": -646.2035435267862,
-      "width": 642.3991088867188,
-      "height": 460,
-      "angle": 0,
-      "strokeColor": "#1e1e1e",
-      "backgroundColor": "transparent",
-      "fillStyle": "solid",
-      "strokeWidth": 1,
-      "strokeStyle": "dashed",
-      "roughness": 0,
-      "opacity": 100,
-      "groupIds": [],
-      "frameId": null,
-      "index": "b4N",
-      "roundness": null,
-      "seed": 1753448871,
-      "version": 683,
-      "versionNonce": 829603423,
-      "isDeleted": false,
-      "boundElements": [],
-      "updated": 1787193803788,
-      "link": null,
-      "locked": false,
-      "text": "文件级定位关系：\nSSTableFooter\n  |\n  +-- metric_index: absolute offset + size\n  |\n  +-- metric_index_root_page: relative offset inside metric index + size\n  |\n  +-- time range / lsn range / metric count / series count\n\nMetricIndex\n  |\n  +-- metric_name -> metric_block_absolute_offset + metric_block_size\n\nMetricBlock\n  |\n  +-- metric data pages\n  +-- metric footer\n\n最重要的不变量：\nMetric block offset 是文件绝对 offset。\nColumnMeta 内的 page offset 是相对当前 metric block 起点的 offset。\n读取列页时需要:\n  absolute_page_offset = metric_offset + column_meta.page_location.offset",
-      "fontSize": 16,
-      "fontFamily": 8,
-      "textAlign": "left",
-      "verticalAlign": "top",
-      "containerId": null,
-      "originalText": "文件级定位关系：\nSSTableFooter\n  |\n  +-- metric_index: absolute offset + size\n  |\n  +-- metric_index_root_page: relative offset inside metric index + size\n  |\n  +-- time range / lsn range / metric count / series count\n\nMetricIndex\n  |\n  +-- metric_name -> metric_block_absolute_offset + metric_block_size\n\nMetricBlock\n  |\n  +-- metric data pages\n  +-- metric footer\n\n最重要的不变量：\nMetric block offset 是文件绝对 offset。\nColumnMeta 内的 page offset 是相对当前 metric block 起点的 offset。\n读取列页时需要:\n  absolute_page_offset = metric_offset + column_meta.page_location.offset",
-      "autoResize": true,
-      "lineHeight": 1.25
-    },
-    {
-      "id": "-hN5LKf1Cso_NECnaI60z",
-      "type": "image",
-      "x": 5491.804594494048,
-      "y": -1297.2504185267862,
-      "width": 1440,
-      "height": 411,
-      "angle": 0,
-      "strokeColor": "transparent",
-      "backgroundColor": "transparent",
-      "fillStyle": "solid",
-      "strokeWidth": 1,
-      "strokeStyle": "dashed",
-      "roughness": 0,
-      "opacity": 100,
-      "groupIds": [],
-      "frameId": null,
-      "index": "b4O",
-      "roundness": null,
-      "seed": 2037778449,
-      "version": 449,
-      "versionNonce": 1501830975,
-      "isDeleted": false,
-      "boundElements": null,
-      "updated": 1787193788321,
-      "link": null,
-      "locked": false,
-      "status": "saved",
-      "fileId": "2f7d046fb71e46e6089e3455cbbd80e2c73b6bf9",
-      "scale": [
-        1,
-        1
-      ],
-      "crop": null
-    },
-    {
       "id": "YBCxstfKE79tfxp-75TKK",
       "type": "text",
-      "x": 7901.088753836495,
-      "y": -1022.7790643601193,
+      "x": 7704.279788062684,
+      "y": -1100.456705729167,
       "width": 439.9993896484375,
       "height": 240,
       "angle": 0,
@@ -2571,11 +2504,24 @@
       "index": "b4P",
       "roundness": null,
       "seed": 1288212113,
-      "version": 295,
-      "versionNonce": 1625940561,
+      "version": 460,
+      "versionNonce": 50892607,
       "isDeleted": false,
-      "boundElements": null,
-      "updated": 1787193801370,
+      "boundElements": [
+        {
+          "id": "ps1_lwWYgcIduWqE3LdMC",
+          "type": "arrow"
+        },
+        {
+          "id": "izR7YwyeJJZnqe9NVyhQr",
+          "type": "arrow"
+        },
+        {
+          "id": "tfBZH2NITc60QpWQpxJkZ",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1787886971544,
       "link": null,
       "locked": false,
       "text": "Metric Block\n+------------------------------------------------+\n| metric payload                                 |\n|                                                |\n| column layout: many data/index/dict/bloom page |\n| or                                             |\n| PAX layout   : one PAX page                    |\n+------------------------------------------------+\n| Metric Footer                                  |\n|   protobuf MetricFooter                        |\n|   crc + size + version + magic                 |\n+------------------------------------------------+",
@@ -2589,417 +2535,10 @@
       "lineHeight": 1.25
     },
     {
-      "id": "m8IVixnWhaaMoIkwhf1UL",
-      "type": "text",
-      "x": 6902.499489920479,
-      "y": -339.41968936011926,
-      "width": 149.59979248046875,
-      "height": 20,
-      "angle": 0,
-      "strokeColor": "#1e1e1e",
-      "backgroundColor": "transparent",
-      "fillStyle": "solid",
-      "strokeWidth": 1,
-      "strokeStyle": "dashed",
-      "roughness": 0,
-      "opacity": 100,
-      "groupIds": [],
-      "frameId": null,
-      "index": "b4Q",
-      "roundness": null,
-      "seed": 176260753,
-      "version": 3,
-      "versionNonce": 383189119,
-      "isDeleted": true,
-      "boundElements": null,
-      "updated": 1787192288299,
-      "link": null,
-      "locked": false,
-      "text": "MetricIndex entry",
-      "fontSize": 16,
-      "fontFamily": 8,
-      "textAlign": "left",
-      "verticalAlign": "top",
-      "containerId": null,
-      "originalText": "MetricIndex entry",
-      "autoResize": true,
-      "lineHeight": 1.25
-    },
-    {
-      "id": "A-2zKCY-5790302n2XOYE",
-      "type": "text",
-      "x": 6748.499703543526,
-      "y": -279.41968936011926,
-      "width": 457.599365234375,
-      "height": 20,
-      "angle": 0,
-      "strokeColor": "#1e1e1e",
-      "backgroundColor": "transparent",
-      "fillStyle": "solid",
-      "strokeWidth": 1,
-      "strokeStyle": "dashed",
-      "roughness": 0,
-      "opacity": 100,
-      "groupIds": [],
-      "frameId": null,
-      "index": "b4R",
-      "roundness": null,
-      "seed": 2100078335,
-      "version": 3,
-      "versionNonce": 645303025,
-      "isDeleted": true,
-      "boundElements": null,
-      "updated": 1787192288299,
-      "link": null,
-      "locked": false,
-      "text": "+----------------+----------------+----------------+",
-      "fontSize": 16,
-      "fontFamily": 8,
-      "textAlign": "left",
-      "verticalAlign": "top",
-      "containerId": null,
-      "originalText": "+----------------+----------------+----------------+",
-      "autoResize": true,
-      "lineHeight": 1.25
-    },
-    {
-      "id": "0zHCdRuRC3BMoVyjxcP-J",
-      "type": "text",
-      "x": 6748.499703543526,
-      "y": -249.41968936011926,
-      "width": 457.599365234375,
-      "height": 20,
-      "angle": 0,
-      "strokeColor": "#1e1e1e",
-      "backgroundColor": "transparent",
-      "fillStyle": "solid",
-      "strokeWidth": 1,
-      "strokeStyle": "dashed",
-      "roughness": 0,
-      "opacity": 100,
-      "groupIds": [],
-      "frameId": null,
-      "index": "b4S",
-      "roundness": null,
-      "seed": 915704945,
-      "version": 3,
-      "versionNonce": 172005535,
-      "isDeleted": true,
-      "boundElements": null,
-      "updated": 1787192288299,
-      "link": null,
-      "locked": false,
-      "text": "| metric name    | offset         | size           |",
-      "fontSize": 16,
-      "fontFamily": 8,
-      "textAlign": "left",
-      "verticalAlign": "top",
-      "containerId": null,
-      "originalText": "| metric name    | offset         | size           |",
-      "autoResize": true,
-      "lineHeight": 1.25
-    },
-    {
-      "id": "iNhG8RH6GQ_aiOaIYdir0",
-      "type": "text",
-      "x": 6748.499703543526,
-      "y": -219.41968936011926,
-      "width": 457.599365234375,
-      "height": 20,
-      "angle": 0,
-      "strokeColor": "#1e1e1e",
-      "backgroundColor": "transparent",
-      "fillStyle": "solid",
-      "strokeWidth": 1,
-      "strokeStyle": "dashed",
-      "roughness": 0,
-      "opacity": 100,
-      "groupIds": [],
-      "frameId": null,
-      "index": "b4T",
-      "roundness": null,
-      "seed": 337473311,
-      "version": 3,
-      "versionNonce": 707396817,
-      "isDeleted": true,
-      "boundElements": null,
-      "updated": 1787192288299,
-      "link": null,
-      "locked": false,
-      "text": "+----------------+----------------+----------------+",
-      "fontSize": 16,
-      "fontFamily": 8,
-      "textAlign": "left",
-      "verticalAlign": "top",
-      "containerId": null,
-      "originalText": "+----------------+----------------+----------------+",
-      "autoResize": true,
-      "lineHeight": 1.25
-    },
-    {
-      "id": "sf1DVLI6LxHAVTQG8luzJ",
-      "type": "text",
-      "x": 6748.499703543526,
-      "y": -189.41968936011926,
-      "width": 457.599365234375,
-      "height": 20,
-      "angle": 0,
-      "strokeColor": "#1e1e1e",
-      "backgroundColor": "transparent",
-      "fillStyle": "solid",
-      "strokeWidth": 1,
-      "strokeStyle": "dashed",
-      "roughness": 0,
-      "opacity": 100,
-      "groupIds": [],
-      "frameId": null,
-      "index": "b4U",
-      "roundness": null,
-      "seed": 1510725201,
-      "version": 3,
-      "versionNonce": 1761750207,
-      "isDeleted": true,
-      "boundElements": null,
-      "updated": 1787192288300,
-      "link": null,
-      "locked": false,
-      "text": "| cpu.load       | 1048576        | 262144         |",
-      "fontSize": 16,
-      "fontFamily": 8,
-      "textAlign": "left",
-      "verticalAlign": "top",
-      "containerId": null,
-      "originalText": "| cpu.load       | 1048576        | 262144         |",
-      "autoResize": true,
-      "lineHeight": 1.25
-    },
-    {
-      "id": "lmeCRCr2FBbAUCd5SXiIE",
-      "type": "text",
-      "x": 6748.499703543526,
-      "y": -159.41968936011926,
-      "width": 457.599365234375,
-      "height": 20,
-      "angle": 0,
-      "strokeColor": "#1e1e1e",
-      "backgroundColor": "transparent",
-      "fillStyle": "solid",
-      "strokeWidth": 1,
-      "strokeStyle": "dashed",
-      "roughness": 0,
-      "opacity": 100,
-      "groupIds": [],
-      "frameId": null,
-      "index": "b4V",
-      "roundness": null,
-      "seed": 2113942335,
-      "version": 3,
-      "versionNonce": 1091781297,
-      "isDeleted": true,
-      "boundElements": null,
-      "updated": 1787192288300,
-      "link": null,
-      "locked": false,
-      "text": "+----------------+----------------+----------------+",
-      "fontSize": 16,
-      "fontFamily": 8,
-      "textAlign": "left",
-      "verticalAlign": "top",
-      "containerId": null,
-      "originalText": "+----------------+----------------+----------------+",
-      "autoResize": true,
-      "lineHeight": 1.25
-    },
-    {
-      "id": "9e4YkHXdUoltvobOWUQIv",
-      "type": "text",
-      "x": 6814.499611990792,
-      "y": -99.41968936011926,
-      "width": 325.59954833984375,
-      "height": 20,
-      "angle": 0,
-      "strokeColor": "#1e1e1e",
-      "backgroundColor": "transparent",
-      "fillStyle": "solid",
-      "strokeWidth": 1,
-      "strokeStyle": "dashed",
-      "roughness": 0,
-      "opacity": 100,
-      "groupIds": [],
-      "frameId": null,
-      "index": "b4W",
-      "roundness": null,
-      "seed": 129950769,
-      "version": 3,
-      "versionNonce": 2126265567,
-      "isDeleted": true,
-      "boundElements": null,
-      "updated": 1787192288300,
-      "link": null,
-      "locked": false,
-      "text": "offset = metric block absolute offset",
-      "fontSize": 16,
-      "fontFamily": 8,
-      "textAlign": "left",
-      "verticalAlign": "top",
-      "containerId": null,
-      "originalText": "offset = metric block absolute offset",
-      "autoResize": true,
-      "lineHeight": 1.25
-    },
-    {
-      "id": "S1uh1SKgcz6Yd6EeUSbDa",
-      "type": "text",
-      "x": 6757.299691336495,
-      "y": -69.41968936011926,
-      "width": 439.9993896484375,
-      "height": 20,
-      "angle": 0,
-      "strokeColor": "#1e1e1e",
-      "backgroundColor": "transparent",
-      "fillStyle": "solid",
-      "strokeWidth": 1,
-      "strokeStyle": "dashed",
-      "roughness": 0,
-      "opacity": 100,
-      "groupIds": [],
-      "frameId": null,
-      "index": "b4X",
-      "roundness": null,
-      "seed": 53834591,
-      "version": 3,
-      "versionNonce": 131712145,
-      "isDeleted": true,
-      "boundElements": null,
-      "updated": 1787192288300,
-      "link": null,
-      "locked": false,
-      "text": "size   = metric payload + metric footer total size",
-      "fontSize": 16,
-      "fontFamily": 8,
-      "textAlign": "left",
-      "verticalAlign": "top",
-      "containerId": null,
-      "originalText": "size   = metric payload + metric footer total size",
-      "autoResize": true,
-      "lineHeight": 1.25
-    },
-    {
-      "id": "O4yLjsNPbRnzB2VE-6sBe",
-      "type": "text",
-      "x": 10108.958222888765,
-      "y": -481.92247953869014,
-      "width": 457.599365234375,
-      "height": 180,
-      "angle": 0,
-      "strokeColor": "#1e1e1e",
-      "backgroundColor": "transparent",
-      "fillStyle": "solid",
-      "strokeWidth": 1,
-      "strokeStyle": "dashed",
-      "roughness": 0,
-      "opacity": 100,
-      "groupIds": [],
-      "frameId": null,
-      "index": "b4Y",
-      "roundness": null,
-      "seed": 390844703,
-      "version": 878,
-      "versionNonce": 377568415,
-      "isDeleted": false,
-      "boundElements": null,
-      "updated": 1787282617957,
-      "link": null,
-      "locked": false,
-      "text": "MetricIndex entry in logic\n// metric block 的位置由 metric index 保存\n+----------------+----------------+----------------+\n| metric name    | offset         | size           |\n+----------------+----------------+----------------+\n| cpu.load       | 1048576        | 262144         |\n+----------------+----------------+----------------+\noffset = metric block absolute offset\nsize   = metric payload + metric footer total size",
-      "fontSize": 16,
-      "fontFamily": 8,
-      "textAlign": "left",
-      "verticalAlign": "top",
-      "containerId": null,
-      "originalText": "MetricIndex entry in logic\n// metric block 的位置由 metric index 保存\n+----------------+----------------+----------------+\n| metric name    | offset         | size           |\n+----------------+----------------+----------------+\n| cpu.load       | 1048576        | 262144         |\n+----------------+----------------+----------------+\noffset = metric block absolute offset\nsize   = metric payload + metric footer total size",
-      "autoResize": true,
-      "lineHeight": 1.25
-    },
-    {
-      "id": "8FEKSjFqizUhBTyvFkzrE",
-      "type": "text",
-      "x": 6071.358529227119,
-      "y": -172.03036644345252,
-      "width": 870.3843180338542,
-      "height": 160,
-      "angle": 0,
-      "strokeColor": "#1e1e1e",
-      "backgroundColor": "transparent",
-      "fillStyle": "solid",
-      "strokeWidth": 1,
-      "strokeStyle": "dashed",
-      "roughness": 0,
-      "opacity": 100,
-      "groupIds": [],
-      "frameId": null,
-      "index": "b4Z",
-      "roundness": null,
-      "seed": 534319441,
-      "version": 39,
-      "versionNonce": 1528297855,
-      "isDeleted": true,
-      "boundElements": null,
-      "updated": 1787192388429,
-      "link": null,
-      "locked": false,
-      "text": "Footer region\n\n+----------------------+----------------+----------------+----------------+----------------+\n| protobuf payload     | crc            | size           | version        | magic          |\n+----------------------+----------------+----------------+----------------+----------------+\n| variable bytes       | 4 B            | 4 B            | 1 B            | 4 B            |\n+----------------------+----------------+----------------+----------------+----------------+\n                       <--------------------- FooterFixedSize = 13 B ---------------------->",
-      "fontSize": 16,
-      "fontFamily": 8,
-      "textAlign": "left",
-      "verticalAlign": "top",
-      "containerId": null,
-      "originalText": "Footer region\n\n+----------------------+----------------+----------------+----------------+----------------+\n| protobuf payload     | crc            | size           | version        | magic          |\n+----------------------+----------------+----------------+----------------+----------------+\n| variable bytes       | 4 B            | 4 B            | 1 B            | 4 B            |\n+----------------------+----------------+----------------+----------------+----------------+\n                       <--------------------- FooterFixedSize = 13 B ---------------------->",
-      "autoResize": false,
-      "lineHeight": 1.25
-    },
-    {
-      "id": "WU_Lq5_PTkt0QJX5voKAd",
-      "type": "text",
-      "x": 6340.961005801244,
-      "y": 106.45270647321422,
-      "width": 554.3992309570312,
-      "height": 140,
-      "angle": 0,
-      "strokeColor": "#1e1e1e",
-      "backgroundColor": "transparent",
-      "fillStyle": "solid",
-      "strokeWidth": 1,
-      "strokeStyle": "dashed",
-      "roughness": 0,
-      "opacity": 100,
-      "groupIds": [],
-      "frameId": null,
-      "index": "b4a",
-      "roundness": null,
-      "seed": 1515600849,
-      "version": 686,
-      "versionNonce": 956655071,
-      "isDeleted": false,
-      "boundElements": null,
-      "updated": 1787282330897,
-      "link": null,
-      "locked": false,
-      "text": "Footer region\n+----------------------+--------+--------+----------+---------+\n| protobuf payload     | crc    | size   | version  | magic   |\n+----------------------+--------+--------+----------+---------+\n| variable bytes       | 4 B    | 4 B    | 1 B      | 4 B     |\n+----------------------+--------+--------+----------+---------+\n                       <------ FooterFixedSize = 13 B -------->",
-      "fontSize": 16,
-      "fontFamily": 8,
-      "textAlign": "left",
-      "verticalAlign": "top",
-      "containerId": null,
-      "originalText": "Footer region\n+----------------------+--------+--------+----------+---------+\n| protobuf payload     | crc    | size   | version  | magic   |\n+----------------------+--------+--------+----------+---------+\n| variable bytes       | 4 B    | 4 B    | 1 B      | 4 B     |\n+----------------------+--------+--------+----------+---------+\n                       <------ FooterFixedSize = 13 B -------->",
-      "autoResize": true,
-      "lineHeight": 1.25
-    },
-    {
       "id": "ISHSaE7ekPF1Y_QadpI6I",
       "type": "text",
-      "x": 6329.509748186385,
-      "y": 338.5239490327382,
+      "x": 6476.107032412573,
+      "y": 526.7056826636906,
       "width": 633.599365234375,
       "height": 520,
       "angle": 0,
@@ -3011,22 +2550,27 @@
       "roughness": 0,
       "opacity": 100,
       "groupIds": [
-        "g-r4LyYkoJS0dDO9vtrSl"
+        "g-r4LyYkoJS0dDO9vtrSl",
+        "QxfVTBXkT1oXz2bxJ5NRx"
       ],
       "frameId": null,
-      "index": "b4b",
+      "index": "b4oG",
       "roundness": null,
       "seed": 1185096657,
-      "version": 545,
-      "versionNonce": 1378295153,
+      "version": 1499,
+      "versionNonce": 887121375,
       "isDeleted": false,
       "boundElements": [
         {
           "id": "rPHkwEoCHC9JnuNShgD7p",
           "type": "arrow"
+        },
+        {
+          "id": "mpso4z7_1nXQ9acxxr9AA",
+          "type": "arrow"
         }
       ],
-      "updated": 1787282327297,
+      "updated": 1787886170150,
       "link": null,
       "locked": false,
       "text": "SSTableFooter\n// 本身是 protobuf payload，不是 C struct；\n// 字段没有固定 byte offset。`uint64` / `uint32` 使用 protobuf varint 编码\n+------------------------+-------------------------+\n| begin_timestamp        | uint64 varint           |\n+------------------------+-------------------------+\n| end_timestamp          | uint64 varint           |\n+------------------------+-------------------------+\n| start_lsn              | uint64 varint           |\n+------------------------+-------------------------+\n| end_lsn                | uint64 varint           |\n+------------------------+-------------------------+\n| num_metrics            | uint64 varint           |\n+------------------------+-------------------------+\n| num_rows               | uint64 varint           |\n+------------------------+-------------------------+\n| metric_index           | PageLocation            |\n+------------------------+-------------------------+\n| metric_index_root_page | PageLocation            |\n+------------------------+-------------------------+\n| intervals              | repeated uint64 varint  |\n+------------------------+-------------------------+\n| aggregators            | repeated uint32 varint  |\n+------------------------+-------------------------+\n| time_precision         | string                  |\n+------------------------+-------------------------+",
@@ -3042,8 +2586,8 @@
     {
       "id": "YFO9wCWEFl4_RNfNgLZCF",
       "type": "text",
-      "x": 6913.639071509953,
-      "y": 652.0460844494049,
+      "x": 7060.236355736141,
+      "y": 840.2278180803576,
       "width": 307.99957275390625,
       "height": 120,
       "angle": 0,
@@ -3055,17 +2599,18 @@
       "roughness": 0,
       "opacity": 100,
       "groupIds": [
-        "g-r4LyYkoJS0dDO9vtrSl"
+        "g-r4LyYkoJS0dDO9vtrSl",
+        "QxfVTBXkT1oXz2bxJ5NRx"
       ],
       "frameId": null,
-      "index": "b4c",
+      "index": "b4oV",
       "roundness": null,
       "seed": 253009969,
-      "version": 629,
-      "versionNonce": 1730430801,
+      "version": 1580,
+      "versionNonce": 1329183263,
       "isDeleted": false,
       "boundElements": null,
-      "updated": 1787282327297,
+      "updated": 1787886170150,
       "link": null,
       "locked": false,
       "text": "PageLocation\n+----------------+----------------+\n| offset         | size           |\n+----------------+----------------+\n| uint64 varint  | uint32 varint  |\n+----------------+----------------+",
@@ -3081,8 +2626,8 @@
     {
       "id": "rPHkwEoCHC9JnuNShgD7p",
       "type": "arrow",
-      "x": 6785.451357886906,
-      "y": 665.6528552827382,
+      "x": 6932.0486421130945,
+      "y": 853.8345889136906,
       "width": 130.31901041666606,
       "height": 2.630208333333485,
       "angle": 0,
@@ -3094,19 +2639,20 @@
       "roughness": 0,
       "opacity": 100,
       "groupIds": [
-        "g-r4LyYkoJS0dDO9vtrSl"
+        "g-r4LyYkoJS0dDO9vtrSl",
+        "QxfVTBXkT1oXz2bxJ5NRx"
       ],
       "frameId": null,
-      "index": "b4d",
+      "index": "b4p",
       "roundness": {
         "type": 2
       },
       "seed": 646927825,
-      "version": 669,
-      "versionNonce": 446772529,
+      "version": 1621,
+      "versionNonce": 1163599423,
       "isDeleted": false,
       "boundElements": null,
-      "updated": 1787282327297,
+      "updated": 1787886170150,
       "link": null,
       "locked": false,
       "points": [
@@ -3130,15 +2676,55 @@
       "endBinding": null,
       "startArrowhead": null,
       "endArrowhead": "arrow",
-      "elbowed": false
+      "elbowed": false,
+      "moveMidPointsWithElement": false
     },
     {
-      "id": "jIHXt_4xjwVoqINrDWoLg",
+      "id": "T2tpU7QBfBh3Uj8XEh51O",
       "type": "text",
-      "x": 7921.161623515782,
-      "y": -474.8164372519826,
-      "width": 202.39971923828125,
-      "height": 280,
+      "x": 7065.295344277045,
+      "y": 969.2088603670661,
+      "width": 492.79931640625,
+      "height": 200,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dashed",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [
+        "QxfVTBXkT1oXz2bxJ5NRx"
+      ],
+      "frameId": null,
+      "index": "b4pV",
+      "roundness": null,
+      "seed": 577961183,
+      "version": 1070,
+      "versionNonce": 368770655,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1787886170150,
+      "link": null,
+      "locked": false,
+      "text": "SSTableFooter.metric_index\n  offset = metric index absolute offset\n  size   = metric index total size\n\nSSTableFooter.metric_index_root_page\n  offset = root page relative offset inside metric index\n  size   = root page size\n\nroot absolute offset:\n  metric_index.offset + metric_index_root_page.offset",
+      "fontSize": 16,
+      "fontFamily": 8,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "SSTableFooter.metric_index\n  offset = metric index absolute offset\n  size   = metric index total size\n\nSSTableFooter.metric_index_root_page\n  offset = root page relative offset inside metric index\n  size   = root page size\n\nroot absolute offset:\n  metric_index.offset + metric_index_root_page.offset",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "SYyTB-_hY8EAVnmMSXUQO",
+      "type": "text",
+      "x": 8526.450485471689,
+      "y": -1859.0632750496018,
+      "width": 395.99945068359375,
+      "height": 360,
       "angle": 0,
       "strokeColor": "#1e1e1e",
       "backgroundColor": "transparent",
@@ -3149,14 +2735,112 @@
       "opacity": 100,
       "groupIds": [],
       "frameId": null,
-      "index": "b4e",
+      "index": "b4q",
+      "roundness": null,
+      "seed": 1349343217,
+      "version": 520,
+      "versionNonce": 2004479487,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "ps1_lwWYgcIduWqE3LdMC",
+          "type": "arrow"
+        },
+        {
+          "id": "XuuPpNcaF8T64ckVUs1WI",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1787887714780,
+      "link": null,
+      "locked": false,
+      "text": "Metric Block: Column Layout\n+===========================================+\n| SeriesGroup #0                            |\n|                                           |\n|   Column #0 pages                         |\n|   Column #1 pages                         |\n|   ...                                     |\n+-------------------------------------------+\n| SeriesGroup #1                            |\n|                                           |\n|   Column #0 pages                         |\n|   Column #1 pages                         |\n|   ...                                     |\n+-------------------------------------------+\n| MetricFooter                              |\n|   storage_format = METRIC_STORAGE_COLUMN  |\n|   series_group_metas[]                    |\n+===========================================+",
+      "fontSize": 16,
+      "fontFamily": 8,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "Metric Block: Column Layout\n+===========================================+\n| SeriesGroup #0                            |\n|                                           |\n|   Column #0 pages                         |\n|   Column #1 pages                         |\n|   ...                                     |\n+-------------------------------------------+\n| SeriesGroup #1                            |\n|                                           |\n|   Column #0 pages                         |\n|   Column #1 pages                         |\n|   ...                                     |\n+-------------------------------------------+\n| MetricFooter                              |\n|   storage_format = METRIC_STORAGE_COLUMN  |\n|   series_group_metas[]                    |\n+===========================================+",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "lmaYepsNdd3uxu8bMr48h",
+      "type": "text",
+      "x": 5466.165532187804,
+      "y": -79.61132812499909,
+      "width": 574.3992919921875,
+      "height": 200,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dashed",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b4zV",
+      "roundness": null,
+      "seed": 518013937,
+      "version": 785,
+      "versionNonce": 1921426527,
+      "isDeleted": true,
+      "boundElements": null,
+      "updated": 1787886271027,
+      "link": null,
+      "locked": false,
+      "text": "PageHeader\n+--------------------+------------------------------------------+\n| page_type          | DATA / INDEX / DICTIONARY / PAX          |\n| uncompressed_size  | body 解压后的大小                         |\n| compressed_size    | body 压缩后的大小                         |\n| compress_type      | 压缩算法                                  |\n| data_page_header   | DATA page 专用                           |\n| index_page_header  | INDEX page 专用                          |\n| dict_page_header   | DICTIONARY page 专用                     |\n+--------------------+------------------------------------------+",
+      "fontSize": 16,
+      "fontFamily": 8,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "PageHeader\n+--------------------+------------------------------------------+\n| page_type          | DATA / INDEX / DICTIONARY / PAX          |\n| uncompressed_size  | body 解压后的大小                         |\n| compressed_size    | body 压缩后的大小                         |\n| compress_type      | 压缩算法                                  |\n| data_page_header   | DATA page 专用                           |\n| index_page_header  | INDEX page 专用                          |\n| dict_page_header   | DICTIONARY page 专用                     |\n+--------------------+------------------------------------------+",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "jIHXt_4xjwVoqINrDWoLg",
+      "type": "text",
+      "x": 7580.555689736019,
+      "y": 61.14570932539823,
+      "width": 202.39971923828125,
+      "height": 280,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dashed",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [
+        "r_YOaFkAkcIlYeM7VHiHQ"
+      ],
+      "frameId": null,
+      "index": "b57",
       "roundness": null,
       "seed": 282637887,
-      "version": 145,
-      "versionNonce": 287733663,
+      "version": 484,
+      "versionNonce": 1171659551,
       "isDeleted": false,
-      "boundElements": null,
-      "updated": 1787281798903,
+      "boundElements": [
+        {
+          "id": "dTrH9l30x3GSxJR0SQrul",
+          "type": "arrow"
+        },
+        {
+          "id": "qH_p2E21_SyT9m_Rju17B",
+          "type": "arrow"
+        },
+        {
+          "id": "S9uVlEixXluA6IPYAfJ__",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1787747819604,
       "link": null,
       "locked": false,
       "text": "Metric Index region\n+---------------------+\n| leaf page 0         |\n+---------------------+\n| leaf page 1         |\n+---------------------+\n| ...                 |\n+---------------------+\n| internal page 0     |\n+---------------------+\n| ...                 |\n+---------------------+\n| root page           |\n+---------------------+",
@@ -3170,10 +2854,50 @@
       "lineHeight": 1.25
     },
     {
+      "id": "O4yLjsNPbRnzB2VE-6sBe",
+      "type": "text",
+      "x": 7947.576619466145,
+      "y": 863.9392206101192,
+      "width": 457.599365234375,
+      "height": 180,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dashed",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [
+        "NE0cpjn6b2FykuOeo7yvz",
+        "r_YOaFkAkcIlYeM7VHiHQ"
+      ],
+      "frameId": null,
+      "index": "b58",
+      "roundness": null,
+      "seed": 390844703,
+      "version": 1825,
+      "versionNonce": 129179487,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1787747819604,
+      "link": null,
+      "locked": false,
+      "text": "MetricIndex entry in logic\n// metric block 的位置由 metric index 保存\n+----------------+----------------+----------------+\n| metric name    | offset         | size           |\n+----------------+----------------+----------------+\n| cpu.load       | 1048576        | 262144         |\n+----------------+----------------+----------------+\noffset = metric block absolute offset\nsize   = metric payload + metric footer total size",
+      "fontSize": 16,
+      "fontFamily": 8,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "MetricIndex entry in logic\n// metric block 的位置由 metric index 保存\n+----------------+----------------+----------------+\n| metric name    | offset         | size           |\n+----------------+----------------+----------------+\n| cpu.load       | 1048576        | 262144         |\n+----------------+----------------+----------------+\noffset = metric block absolute offset\nsize   = metric payload + metric footer total size",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
       "id": "E_w5hAYTQI6vt4epebsq5",
       "type": "text",
-      "x": 9339.500948466954,
-      "y": -480.3633122519824,
+      "x": 7828.1249254014765,
+      "y": 409.6780753968268,
       "width": 580.7991943359375,
       "height": 120,
       "angle": 0,
@@ -3184,16 +2908,24 @@
       "strokeStyle": "dashed",
       "roughness": 0,
       "opacity": 100,
-      "groupIds": [],
+      "groupIds": [
+        "NE0cpjn6b2FykuOeo7yvz",
+        "r_YOaFkAkcIlYeM7VHiHQ"
+      ],
       "frameId": null,
-      "index": "b4f",
+      "index": "b59",
       "roundness": null,
       "seed": 112955839,
-      "version": 382,
-      "versionNonce": 1313377279,
+      "version": 1107,
+      "versionNonce": 200661887,
       "isDeleted": false,
-      "boundElements": null,
-      "updated": 1787282611879,
+      "boundElements": [
+        {
+          "id": "qH_p2E21_SyT9m_Rju17B",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1787747819604,
       "link": null,
       "locked": false,
       "text": "leaf page\n+----------------+----------------+------------------------------+\n| page entry 0   | metric name    | metric block offset / size   |\n| page entry 1   | metric name    | metric block offset / size   |\n| ...            | ...            | ...                          |\n+----------------+----------------+------------------------------+",
@@ -3209,8 +2941,8 @@
     {
       "id": "g-a28tnEyW0GPc4vvzRMY",
       "type": "text",
-      "x": 9343.669475252667,
-      "y": -303.2539372519825,
+      "x": 7832.432961115763,
+      "y": 564.3209325396839,
       "width": 580.7991943359375,
       "height": 120,
       "angle": 0,
@@ -3221,16 +2953,19 @@
       "strokeStyle": "dashed",
       "roughness": 0,
       "opacity": 100,
-      "groupIds": [],
+      "groupIds": [
+        "NE0cpjn6b2FykuOeo7yvz",
+        "r_YOaFkAkcIlYeM7VHiHQ"
+      ],
       "frameId": null,
-      "index": "b4g",
+      "index": "b5A",
       "roundness": null,
       "seed": 1582799743,
-      "version": 324,
-      "versionNonce": 41202719,
+      "version": 1177,
+      "versionNonce": 1288442783,
       "isDeleted": false,
-      "boundElements": null,
-      "updated": 1787282611879,
+      "boundElements": [],
+      "updated": 1787747819604,
       "link": null,
       "locked": false,
       "text": "internal page\n+----------------+----------------+------------------------------+\n| page entry 0   | child max key  | child page offset / size     |\n| page entry 1   | child max key  | child page offset / size     |\n| ...            | ...            | ...                          |\n+----------------+----------------+------------------------------+",
@@ -3244,47 +2979,10 @@
       "lineHeight": 1.25
     },
     {
-      "id": "oKKUnFIrceXJnej_fbcuM",
-      "type": "text",
-      "x": 8358.265500992064,
-      "y": -185.64233010912528,
-      "width": 8.79998779296875,
-      "height": 20,
-      "angle": 0,
-      "strokeColor": "#1e1e1e",
-      "backgroundColor": "transparent",
-      "fillStyle": "solid",
-      "strokeWidth": 1,
-      "strokeStyle": "dashed",
-      "roughness": 0,
-      "opacity": 100,
-      "groupIds": [],
-      "frameId": null,
-      "index": "b4h",
-      "roundness": null,
-      "seed": 1837435057,
-      "version": 3,
-      "versionNonce": 388164383,
-      "isDeleted": true,
-      "boundElements": null,
-      "updated": 1787282083777,
-      "link": null,
-      "locked": false,
-      "text": "",
-      "fontSize": 16,
-      "fontFamily": 8,
-      "textAlign": "left",
-      "verticalAlign": "top",
-      "containerId": null,
-      "originalText": "",
-      "autoResize": true,
-      "lineHeight": 1.25
-    },
-    {
       "id": "_iRJOYZim7NSNOr2tso8n",
       "type": "text",
-      "x": 9348.946304563495,
-      "y": -145.00616939483962,
+      "x": 7837.531218998018,
+      "y": 691.9381200396838,
       "width": 555.1995849609375,
       "height": 120,
       "angle": 0,
@@ -3295,16 +2993,19 @@
       "strokeStyle": "dashed",
       "roughness": 0,
       "opacity": 100,
-      "groupIds": [],
+      "groupIds": [
+        "NE0cpjn6b2FykuOeo7yvz",
+        "r_YOaFkAkcIlYeM7VHiHQ"
+      ],
       "frameId": null,
-      "index": "b4i",
+      "index": "b5B",
       "roundness": null,
       "seed": 1651800593,
-      "version": 274,
-      "versionNonce": 187095103,
+      "version": 1051,
+      "versionNonce": 1650870207,
       "isDeleted": false,
       "boundElements": null,
-      "updated": 1787282611879,
+      "updated": 1787747819604,
       "link": null,
       "locked": false,
       "text": "root page 也是一个 internal page\nappend metric entries\n  -> leaf page 满了就切新 leaf page\n  -> Finish() 时为当前这一层 children 生成 parent internal page\n  -> 如果 parent internal page 也超过一个，继续向上生成新的 parent\n  -> 直到最后只剩一个 page，这个 page 就是 root page",
@@ -3318,47 +3019,10 @@
       "lineHeight": 1.25
     },
     {
-      "id": "ey99wxzXBrGhct1DJSMVt",
-      "type": "text",
-      "x": 8478.265500992064,
-      "y": -218.49947296626817,
-      "width": 8.79998779296875,
-      "height": 20,
-      "angle": 0,
-      "strokeColor": "#1e1e1e",
-      "backgroundColor": "transparent",
-      "fillStyle": "solid",
-      "strokeWidth": 1,
-      "strokeStyle": "dashed",
-      "roughness": 0,
-      "opacity": 100,
-      "groupIds": [],
-      "frameId": null,
-      "index": "b4j",
-      "roundness": null,
-      "seed": 2143419519,
-      "version": 3,
-      "versionNonce": 1116014257,
-      "isDeleted": true,
-      "boundElements": null,
-      "updated": 1787282090594,
-      "link": null,
-      "locked": false,
-      "text": "",
-      "fontSize": 16,
-      "fontFamily": 8,
-      "textAlign": "left",
-      "verticalAlign": "top",
-      "containerId": null,
-      "originalText": "",
-      "autoResize": true,
-      "lineHeight": 1.25
-    },
-    {
       "id": "EXULTEjmpCBQ-lUuC52zY",
       "type": "text",
-      "x": 8392.172845265219,
-      "y": -471.2450086805537,
+      "x": 7983.771152556885,
+      "y": 49.84548611111279,
       "width": 290.39959716796875,
       "height": 160,
       "angle": 0,
@@ -3369,16 +3033,31 @@
       "strokeStyle": "dashed",
       "roughness": 0,
       "opacity": 100,
-      "groupIds": [],
+      "groupIds": [
+        "r_YOaFkAkcIlYeM7VHiHQ"
+      ],
       "frameId": null,
-      "index": "b4k",
+      "index": "b5C",
       "roundness": null,
       "seed": 818904433,
-      "version": 420,
-      "versionNonce": 1116553649,
+      "version": 581,
+      "versionNonce": 182777823,
       "isDeleted": false,
-      "boundElements": null,
-      "updated": 1787282591495,
+      "boundElements": [
+        {
+          "id": "5nVdIOBggvGBGzT3wIKvR",
+          "type": "arrow"
+        },
+        {
+          "id": "0CXbN0sVzv28Ex0YdVBI4",
+          "type": "arrow"
+        },
+        {
+          "id": "ndeGTuNR1M5nMt34pMOyi",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1787747819604,
       "link": null,
       "locked": false,
       "text": "MetricIndexPage\n+-------------------------------+\n| compressed index body         |\n+-------------------------------+\n| MetricIndexPageFooter protobuf|\n+-------------------------------+\n| PageCommonFooter              |\n+-------------------------------+",
@@ -3392,10 +3071,109 @@
       "lineHeight": 1.25
     },
     {
+      "id": "dTrH9l30x3GSxJR0SQrul",
+      "type": "arrow",
+      "x": 7788.4554089743,
+      "y": 197.9375964474733,
+      "width": 198.74393378362038,
+      "height": 116.93778245937801,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dashed",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [
+        "r_YOaFkAkcIlYeM7VHiHQ"
+      ],
+      "frameId": null,
+      "index": "b5D",
+      "roundness": {
+        "type": 2
+      },
+      "seed": 679880337,
+      "version": 408,
+      "versionNonce": 1817748479,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "type": "text",
+          "id": "Xar6MvbXh7tYNs8Xf9fK0"
+        }
+      ],
+      "updated": 1787747819604,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          198.74393378362038,
+          -116.93778245937801
+        ]
+      ],
+      "startBinding": {
+        "elementId": "jIHXt_4xjwVoqINrDWoLg",
+        "mode": "orbit",
+        "fixedPoint": [
+          1,
+          0.5001
+        ]
+      },
+      "endBinding": null,
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "elbowed": false,
+      "moveMidPointsWithElement": false
+    },
+    {
+      "id": "Xar6MvbXh7tYNs8Xf9fK0",
+      "type": "text",
+      "x": 7852.627424694234,
+      "y": 129.46870521778436,
+      "width": 70.39990234375,
+      "height": 20,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dashed",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [
+        "r_YOaFkAkcIlYeM7VHiHQ"
+      ],
+      "frameId": null,
+      "index": "b5E",
+      "roundness": null,
+      "seed": 250670673,
+      "version": 170,
+      "versionNonce": 381799455,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1787747819604,
+      "link": null,
+      "locked": false,
+      "text": "Physical",
+      "fontSize": 16,
+      "fontFamily": 8,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "dTrH9l30x3GSxJR0SQrul",
+      "originalText": "Physical",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
       "id": "zbJPg4qZr9ghqvtIUF2BJ",
       "type": "text",
-      "x": 8397.758381677051,
-      "y": -244.9336247519824,
+      "x": 8521.081019325862,
+      "y": -188.65339781745854,
       "width": 677.5990600585938,
       "height": 80,
       "angle": 0,
@@ -3406,16 +3184,32 @@
       "strokeStyle": "dashed",
       "roughness": 0,
       "opacity": 100,
-      "groupIds": [],
+      "groupIds": [
+        "goVuhMhYuNStSIAAmnOdd",
+        "r_YOaFkAkcIlYeM7VHiHQ"
+      ],
       "frameId": null,
-      "index": "b4l",
+      "index": "b5F",
       "roundness": null,
       "seed": 483374431,
-      "version": 411,
-      "versionNonce": 1740366737,
+      "version": 1045,
+      "versionNonce": 1175515199,
       "isDeleted": false,
-      "boundElements": null,
-      "updated": 1787282591495,
+      "boundElements": [
+        {
+          "id": "fYFaSXC8SZDZFgBv3TJKs",
+          "type": "arrow"
+        },
+        {
+          "id": "Rra8JpvaRt4cQ7JP9Y_H-",
+          "type": "arrow"
+        },
+        {
+          "id": "5nVdIOBggvGBGzT3wIKvR",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1787747819604,
       "link": null,
       "locked": false,
       "text": "uncompressed body\n+------------------+------------------+------------------+------------------+\n| restart block 0  | restart block 1  | ...              | restart offsets  |\n+------------------+------------------+------------------+------------------+",
@@ -3431,8 +3225,8 @@
     {
       "id": "IhfgCU_gkciU4M3ck_b9J",
       "type": "text",
-      "x": 8400.564359634638,
-      "y": -105.54746403769673,
+      "x": 8523.88699728345,
+      "y": -49.267237103172874,
       "width": 607.1991577148438,
       "height": 120,
       "angle": 0,
@@ -3443,16 +3237,24 @@
       "strokeStyle": "dashed",
       "roughness": 0,
       "opacity": 100,
-      "groupIds": [],
+      "groupIds": [
+        "goVuhMhYuNStSIAAmnOdd",
+        "r_YOaFkAkcIlYeM7VHiHQ"
+      ],
       "frameId": null,
-      "index": "b4m",
+      "index": "b5G",
       "roundness": null,
       "seed": 560414975,
-      "version": 333,
-      "versionNonce": 377178481,
+      "version": 965,
+      "versionNonce": 1680248927,
       "isDeleted": false,
-      "boundElements": null,
-      "updated": 1787282591495,
+      "boundElements": [
+        {
+          "id": "fYFaSXC8SZDZFgBv3TJKs",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1787747819604,
       "link": null,
       "locked": false,
       "text": "restart entry 保存完整 key：\n+----------------+----------------+----------------+----------------+\n| key_len        | key bytes      | offset         | size           |\n+----------------+----------------+----------------+----------------+\n| varint32       | key_len bytes  | varint64       | varint64       |\n+----------------+----------------+----------------+----------------+",
@@ -3468,8 +3270,8 @@
     {
       "id": "gOZ_nQCy4-N06eQmHBjB7",
       "type": "text",
-      "x": 8396.724284822976,
-      "y": 43.420169890874945,
+      "x": 8520.046922471787,
+      "y": 99.7003968253988,
       "width": 756.7989501953125,
       "height": 120,
       "angle": 0,
@@ -3480,16 +3282,24 @@
       "strokeStyle": "dashed",
       "roughness": 0,
       "opacity": 100,
-      "groupIds": [],
+      "groupIds": [
+        "goVuhMhYuNStSIAAmnOdd",
+        "r_YOaFkAkcIlYeM7VHiHQ"
+      ],
       "frameId": null,
-      "index": "b4n",
+      "index": "b5H",
       "roundness": null,
       "seed": 531178975,
-      "version": 359,
-      "versionNonce": 1746072401,
+      "version": 991,
+      "versionNonce": 1255353471,
       "isDeleted": false,
-      "boundElements": null,
-      "updated": 1787282591495,
+      "boundElements": [
+        {
+          "id": "Rra8JpvaRt4cQ7JP9Y_H-",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1787747819604,
       "link": null,
       "locked": false,
       "text": "非 restart entry 使用前缀压缩：\n+----------------+----------------+----------------+----------------+----------------+\n| shared_len     | non_shared_len | non_shared key | offset         | size           |\n+----------------+----------------+----------------+----------------+----------------+\n| varint32       | varint32       | bytes          | varint64       | varint64       |\n+----------------+----------------+----------------+----------------+----------------+",
@@ -3503,11 +3313,565 @@
       "lineHeight": 1.25
     },
     {
-      "id": "OoQHPWSHUtnTV5bYW3pcx",
+      "id": "fYFaSXC8SZDZFgBv3TJKs",
+      "type": "arrow",
+      "x": 8524.291976686494,
+      "y": -132.20889136904736,
+      "width": 25.8984375,
+      "height": 128.59420149964774,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dashed",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [
+        "goVuhMhYuNStSIAAmnOdd",
+        "r_YOaFkAkcIlYeM7VHiHQ"
+      ],
+      "frameId": null,
+      "index": "b5I",
+      "roundness": {
+        "type": 2
+      },
+      "seed": 1759583007,
+      "version": 803,
+      "versionNonce": 1171735711,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1787747819604,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -25.8984375,
+          76.39508928571433
+        ],
+        [
+          -5.904979403045218,
+          128.59420149964774
+        ]
+      ],
+      "startBinding": {
+        "elementId": "zbJPg4qZr9ghqvtIUF2BJ",
+        "mode": "inside",
+        "fixedPoint": [
+          0.004738727589667118,
+          0.7055563306051397
+        ]
+      },
+      "endBinding": {
+        "elementId": "IhfgCU_gkciU4M3ck_b9J",
+        "mode": "orbit",
+        "fixedPoint": [
+          0,
+          0.5001
+        ]
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "elbowed": false
+    },
+    {
+      "id": "Rra8JpvaRt4cQ7JP9Y_H-",
+      "type": "arrow",
+      "x": 8527.110057043637,
+      "y": -132.44326636904736,
+      "width": 55.17299107142753,
+      "height": 270.93004608801914,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dashed",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [
+        "goVuhMhYuNStSIAAmnOdd",
+        "r_YOaFkAkcIlYeM7VHiHQ"
+      ],
+      "frameId": null,
+      "index": "b5J",
+      "roundness": {
+        "type": 2
+      },
+      "seed": 1889230751,
+      "version": 827,
+      "versionNonce": 1424185535,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1787747819605,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -55.17299107142753,
+          106.489955357143
+        ],
+        [
+          -12.563134571850242,
+          270.93004608801914
+        ]
+      ],
+      "startBinding": {
+        "elementId": "zbJPg4qZr9ghqvtIUF2BJ",
+        "mode": "inside",
+        "fixedPoint": [
+          0.00889764769929571,
+          0.7026266431051397
+        ]
+      },
+      "endBinding": {
+        "elementId": "gOZ_nQCy4-N06eQmHBjB7",
+        "mode": "orbit",
+        "fixedPoint": [
+          0,
+          0.5001
+        ]
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "elbowed": false
+    },
+    {
+      "id": "Ds5pha6aGAQ56zgP8wrTf",
       "type": "text",
-      "x": 7453.623337034204,
-      "y": 106.67351810516004,
-      "width": 677.5990600585938,
+      "x": 8527.813016376778,
+      "y": 291.37369791666504,
+      "width": 404.7994384765625,
+      "height": 220,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dashed",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [
+        "r_YOaFkAkcIlYeM7VHiHQ"
+      ],
+      "frameId": null,
+      "index": "b5K",
+      "roundness": null,
+      "seed": 2052613951,
+      "version": 717,
+      "versionNonce": 764930271,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "ndeGTuNR1M5nMt34pMOyi",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1787747819605,
+      "link": null,
+      "locked": false,
+      "text": "MetricIndexPageFooter\n+-------------------+------------------------+\n| field             | type                   |\n+-------------------+------------------------+\n| type              | IndexPageType          |\n| compress_type     | uint32                 |\n| num_restarts      | uint32                 |\n| uncompressed_size | uint32                 |\n| num_entries       | uint32                 |\n| version           | MetricIndexPageVersion |\n+-------------------+------------------------+",
+      "fontSize": 16,
+      "fontFamily": 8,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "MetricIndexPageFooter\n+-------------------+------------------------+\n| field             | type                   |\n+-------------------+------------------------+\n| type              | IndexPageType          |\n| compress_type     | uint32                 |\n| num_restarts      | uint32                 |\n| uncompressed_size | uint32                 |\n| num_entries       | uint32                 |\n| version           | MetricIndexPageVersion |\n+-------------------+------------------------+",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "qH_p2E21_SyT9m_Rju17B",
+      "type": "arrow",
+      "x": 7788.4554089743015,
+      "y": 214.32047808456616,
+      "width": 79.42763764588926,
+      "height": 189.85759731226062,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dashed",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [
+        "r_YOaFkAkcIlYeM7VHiHQ"
+      ],
+      "frameId": null,
+      "index": "b5L",
+      "roundness": {
+        "type": 2
+      },
+      "seed": 2071474591,
+      "version": 277,
+      "versionNonce": 2105898239,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "type": "text",
+          "id": "NdUZodtTdJAe5Fzd4rPYL"
+        }
+      ],
+      "updated": 1787747819605,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          79.42763764588926,
+          189.85759731226062
+        ]
+      ],
+      "startBinding": {
+        "elementId": "jIHXt_4xjwVoqINrDWoLg",
+        "mode": "orbit",
+        "fixedPoint": [
+          1,
+          0.5001
+        ]
+      },
+      "endBinding": {
+        "elementId": "E_w5hAYTQI6vt4epebsq5",
+        "mode": "orbit",
+        "fixedPoint": [
+          0.14621438404060494,
+          0.8537856159593947
+        ]
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "elbowed": false,
+      "moveMidPointsWithElement": false
+    },
+    {
+      "id": "NdUZodtTdJAe5Fzd4rPYL",
+      "type": "text",
+      "x": 7851.138089376782,
+      "y": 291.25668937004536,
+      "width": 61.59991455078125,
+      "height": 20,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dashed",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [
+        "r_YOaFkAkcIlYeM7VHiHQ"
+      ],
+      "frameId": null,
+      "index": "b5M",
+      "roundness": null,
+      "seed": 437318449,
+      "version": 163,
+      "versionNonce": 1814854943,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1787747819605,
+      "link": null,
+      "locked": false,
+      "text": "Logical",
+      "fontSize": 16,
+      "fontFamily": 8,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "qH_p2E21_SyT9m_Rju17B",
+      "originalText": "Logical",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "5nVdIOBggvGBGzT3wIKvR",
+      "type": "arrow",
+      "x": 8273.678137400773,
+      "y": 93.77325148809359,
+      "width": 241.90288192508706,
+      "height": 237.02945350958578,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dashed",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [
+        "r_YOaFkAkcIlYeM7VHiHQ"
+      ],
+      "frameId": null,
+      "index": "b5N",
+      "roundness": {
+        "type": 2
+      },
+      "seed": 302436767,
+      "version": 291,
+      "versionNonce": 1560117567,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1787747819605,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          241.90288192508706,
+          -237.02945350958578
+        ]
+      ],
+      "startBinding": {
+        "elementId": "EXULTEjmpCBQ-lUuC52zY",
+        "mode": "inside",
+        "fixedPoint": [
+          0.9983036742168918,
+          0.27454853360613
+        ]
+      },
+      "endBinding": {
+        "elementId": "zbJPg4qZr9ghqvtIUF2BJ",
+        "mode": "orbit",
+        "fixedPoint": [
+          0,
+          0.5001
+        ]
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "elbowed": false,
+      "moveMidPointsWithElement": false
+    },
+    {
+      "id": "ndeGTuNR1M5nMt34pMOyi",
+      "type": "arrow",
+      "x": 8279.670749724854,
+      "y": 133.1803432480733,
+      "width": 253.04296509917185,
+      "height": 152.69335466859175,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dashed",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [
+        "r_YOaFkAkcIlYeM7VHiHQ"
+      ],
+      "frameId": null,
+      "index": "b5O",
+      "roundness": {
+        "type": 2
+      },
+      "seed": 638735807,
+      "version": 383,
+      "versionNonce": 1901658463,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1787747819605,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          253.04296509917185,
+          152.69335466859175
+        ]
+      ],
+      "startBinding": {
+        "elementId": "EXULTEjmpCBQ-lUuC52zY",
+        "mode": "orbit",
+        "fixedPoint": [
+          1,
+          0.5001
+        ]
+      },
+      "endBinding": {
+        "elementId": "Ds5pha6aGAQ56zgP8wrTf",
+        "mode": "orbit",
+        "fixedPoint": [
+          0.3484992386151434,
+          0.34849923861514187
+        ]
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "elbowed": false,
+      "moveMidPointsWithElement": false
+    },
+    {
+      "id": "S9uVlEixXluA6IPYAfJ__",
+      "type": "arrow",
+      "x": 7160.054160466251,
+      "y": -20.690801711310996,
+      "width": 415.00152926976807,
+      "height": 89.59572459329593,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dashed",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b5P",
+      "roundness": {
+        "type": 2
+      },
+      "seed": 1498889457,
+      "version": 115,
+      "versionNonce": 1271095103,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1787747819604,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          415.00152926976807,
+          89.59572459329593
+        ]
+      ],
+      "startBinding": {
+        "elementId": "555vsbwt4wpA7iEsUzLJu",
+        "mode": "inside",
+        "fixedPoint": [
+          0.9977330520332042,
+          0.6622645786830328
+        ]
+      },
+      "endBinding": {
+        "elementId": "jIHXt_4xjwVoqINrDWoLg",
+        "mode": "orbit",
+        "fixedPoint": [
+          0.03786074098727083,
+          0.037860740987268646
+        ]
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "elbowed": false,
+      "moveMidPointsWithElement": false
+    },
+    {
+      "id": "lV32WBERuCryRQz56Qygt",
+      "type": "text",
+      "x": 8502.397378588461,
+      "y": -941.3836495535725,
+      "width": 439.9993896484375,
+      "height": 240,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dashed",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b5Q",
+      "roundness": null,
+      "seed": 1943880849,
+      "version": 283,
+      "versionNonce": 1303460145,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "izR7YwyeJJZnqe9NVyhQr",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1787887768982,
+      "link": null,
+      "locked": false,
+      "text": "Metric Block: PAX Layout\n+------------------------------------------------+\n| PAX Page                                       |\n|   offset array                                 |\n|   column payload #0                            |\n|   column payload #1                            |\n|   ...                                          |\n+------------------------------------------------+\n| MetricFooter                                   |\n|   storage_format = METRIC_STORAGE_PAX          |\n|   one SeriesGroupMeta with ColumnMeta list     |\n+------------------------------------------------+",
+      "fontSize": 16,
+      "fontFamily": 8,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "Metric Block: PAX Layout\n+------------------------------------------------+\n| PAX Page                                       |\n|   offset array                                 |\n|   column payload #0                            |\n|   column payload #1                            |\n|   ...                                          |\n+------------------------------------------------+\n| MetricFooter                                   |\n|   storage_format = METRIC_STORAGE_PAX          |\n|   one SeriesGroupMeta with ColumnMeta list     |\n+------------------------------------------------+",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "ZQtcF28MyIf8cNy4AUknk",
+      "type": "text",
+      "x": 7718.232031443748,
+      "y": -657.6969866071453,
+      "width": 536.7992553710938,
+      "height": 180,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dashed",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b5R",
+      "roundness": null,
+      "seed": 1827148927,
+      "version": 432,
+      "versionNonce": 203865343,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "tfBZH2NITc60QpWQpxJkZ",
+          "type": "arrow"
+        },
+        {
+          "id": "Zw2WQlBO0e22y9qbvGG9l",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1787887045158,
+      "link": null,
+      "locked": false,
+      "text": "MetricFooter\n+----------------------+------------------------------------+\n| metric_type          | single-value / multi-value         |\n| num_rows             | series count                       |\n| storage_format       | METRIC_STORAGE_COLUMN              |\n| series_group_metas   | 每个 series group 的列元数据        |\n| metric_stats         | tag / field stat                   |\n| write_count          | memtable original column           |\n+----------------------+------------------------------------+",
+      "fontSize": 16,
+      "fontFamily": 8,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "MetricFooter\n+----------------------+------------------------------------+\n| metric_type          | single-value / multi-value         |\n| num_rows             | series count                       |\n| storage_format       | METRIC_STORAGE_COLUMN              |\n| series_group_metas   | 每个 series group 的列元数据        |\n| metric_stats         | tag / field stat                   |\n| write_count          | memtable original column           |\n+----------------------+------------------------------------+",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "FHAsk_wv9kDItgGoa3z9V",
+      "type": "text",
+      "x": 8344.740070645757,
+      "y": -599.7114955357172,
+      "width": 228.7996826171875,
       "height": 120,
       "angle": 0,
       "strokeColor": "#1e1e1e",
@@ -3519,33 +3883,42 @@
       "opacity": 100,
       "groupIds": [],
       "frameId": null,
-      "index": "b4o",
+      "index": "b5S",
       "roundness": null,
-      "seed": 1084696881,
-      "version": 157,
-      "versionNonce": 738420543,
+      "seed": 760889681,
+      "version": 634,
+      "versionNonce": 1577061631,
       "isDeleted": false,
-      "boundElements": null,
-      "updated": 1787282914705,
+      "boundElements": [
+        {
+          "id": "Zw2WQlBO0e22y9qbvGG9l",
+          "type": "arrow"
+        },
+        {
+          "id": "-oYeialU70_AbdOmoymsW",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1787887050491,
       "link": null,
       "locked": false,
-      "text": "Common Page Structure\n+----------------+----------------+----------------------+------------------+\n| checksum       | header_length  | PageHeader protobuf  | compressed body  |\n+----------------+----------------+----------------------+------------------+\n| 4 B            | 4 B            | header_length bytes  | compressed_size  |\n+----------------+----------------+----------------------+------------------+",
+      "text": "SeriesGroupMeta\n+---------+--------------+\n| num_row | column_metas |\n+---------+--------------+\n| uint32  | ColumnMeta[] |\n+---------+--------------+",
       "fontSize": 16,
       "fontFamily": 8,
       "textAlign": "left",
       "verticalAlign": "top",
       "containerId": null,
-      "originalText": "Common Page Structure\n+----------------+----------------+----------------------+------------------+\n| checksum       | header_length  | PageHeader protobuf  | compressed body  |\n+----------------+----------------+----------------------+------------------+\n| 4 B            | 4 B            | header_length bytes  | compressed_size  |\n+----------------+----------------+----------------------+------------------+",
+      "originalText": "SeriesGroupMeta\n+---------+--------------+\n| num_row | column_metas |\n+---------+--------------+\n| uint32  | ColumnMeta[] |\n+---------+--------------+",
       "autoResize": true,
       "lineHeight": 1.25
     },
     {
-      "id": "T2tpU7QBfBh3Uj8XEh51O",
+      "id": "8mEnHTlzgzXCbJIjFu9Ow",
       "type": "text",
-      "x": 6913.099101717524,
-      "y": 778.7745225694468,
-      "width": 492.79931640625,
-      "height": 200,
+      "x": 6475.886344304145,
+      "y": 205.63919890872785,
+      "width": 219.99969482421875,
+      "height": 280,
       "angle": 0,
       "strokeColor": "#1e1e1e",
       "backgroundColor": "transparent",
@@ -3556,23 +3929,2016 @@
       "opacity": 100,
       "groupIds": [],
       "frameId": null,
-      "index": "b4p",
+      "index": "b5U",
       "roundness": null,
-      "seed": 577961183,
-      "version": 120,
-      "versionNonce": 909045791,
+      "seed": 1404864415,
+      "version": 164,
+      "versionNonce": 1334816223,
       "isDeleted": false,
-      "boundElements": null,
-      "updated": 1787282434804,
+      "boundElements": [
+        {
+          "id": "Icl8LAXshoNeMZfiatG0u",
+          "type": "arrow"
+        },
+        {
+          "id": "mpso4z7_1nXQ9acxxr9AA",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1787886164787,
       "link": null,
       "locked": false,
-      "text": "SSTableFooter.metric_index\n  offset = metric index absolute offset\n  size   = metric index total size\n\nSSTableFooter.metric_index_root_page\n  offset = root page relative offset inside metric index\n  size   = root page size\n\nroot absolute offset:\n  metric_index.offset + metric_index_root_page.offset",
+      "text": "EOF\n |\n v\n+----------------+\n| magic          | 4 B\n+----------------+\n| version        | 1 B\n+----------------+\n| size           | 4 B\n+----------------+\n| crc            | 4 B\n+----------------+\n| SSTableFooter  | size B\n+----------------+",
       "fontSize": 16,
       "fontFamily": 8,
       "textAlign": "left",
       "verticalAlign": "top",
       "containerId": null,
-      "originalText": "SSTableFooter.metric_index\n  offset = metric index absolute offset\n  size   = metric index total size\n\nSSTableFooter.metric_index_root_page\n  offset = root page relative offset inside metric index\n  size   = root page size\n\nroot absolute offset:\n  metric_index.offset + metric_index_root_page.offset",
+      "originalText": "EOF\n |\n v\n+----------------+\n| magic          | 4 B\n+----------------+\n| version        | 1 B\n+----------------+\n| size           | 4 B\n+----------------+\n| crc            | 4 B\n+----------------+\n| SSTableFooter  | size B\n+----------------+",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "Icl8LAXshoNeMZfiatG0u",
+      "type": "arrow",
+      "x": 6721.256169394836,
+      "y": 77.70842633928595,
+      "width": 240.8274035115155,
+      "height": 122.43077256944193,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dashed",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b5V",
+      "roundness": {
+        "type": 2
+      },
+      "seed": 583785663,
+      "version": 803,
+      "versionNonce": 234345791,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1787886161252,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -204.9609374999991,
+          53.633928571428555
+        ],
+        [
+          -240.8274035115155,
+          122.43077256944193
+        ]
+      ],
+      "startBinding": null,
+      "endBinding": {
+        "elementId": "8mEnHTlzgzXCbJIjFu9Ow",
+        "mode": "orbit",
+        "fixedPoint": [
+          0.0045769793275023075,
+          0.004576979327502885
+        ]
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "elbowed": false,
+      "moveMidPointsWithElement": false
+    },
+    {
+      "id": "mpso4z7_1nXQ9acxxr9AA",
+      "type": "arrow",
+      "x": 6481.425254216254,
+      "y": 453.75638640872785,
+      "width": 4.449040988383786,
+      "height": 67.44929625496286,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dashed",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b5W",
+      "roundness": {
+        "type": 2
+      },
+      "seed": 1476710783,
+      "version": 129,
+      "versionNonce": 1622561279,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1787886170150,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -4.449040988383786,
+          67.44929625496286
+        ]
+      ],
+      "startBinding": {
+        "elementId": "8mEnHTlzgzXCbJIjFu9Ow",
+        "mode": "inside",
+        "fixedPoint": [
+          0.02517689816131337,
+          0.8861328125
+        ]
+      },
+      "endBinding": {
+        "elementId": "ISHSaE7ekPF1Y_QadpI6I",
+        "mode": "orbit",
+        "fixedPoint": [
+          0.000758189009640781,
+          0.0007581890096417965
+        ]
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "elbowed": false,
+      "moveMidPointsWithElement": false
+    },
+    {
+      "id": "QQztEgU7iSK86gyU1_Wx0",
+      "type": "freedraw",
+      "x": 5449.894004216254,
+      "y": -1031.0795510912722,
+      "width": 31.921875,
+      "height": 363.7109375,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0.5,
+      "strokeStyle": "dashed",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b5e",
+      "roundness": null,
+      "seed": 1667504081,
+      "version": 145,
+      "versionNonce": 1544990353,
+      "isDeleted": true,
+      "boundElements": null,
+      "updated": 1787886305237,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -0.46875,
+          0
+        ],
+        [
+          -1.40625,
+          0
+        ],
+        [
+          -1.40625,
+          0.4765625
+        ],
+        [
+          -1.875,
+          0.953125
+        ],
+        [
+          -3.28125,
+          1.90625
+        ],
+        [
+          -3.28125,
+          2.3828125
+        ],
+        [
+          -4.6875,
+          4.2734375
+        ],
+        [
+          -5.15625,
+          4.75
+        ],
+        [
+          -6.5625,
+          6.640625
+        ],
+        [
+          -7.03125,
+          7.5859375
+        ],
+        [
+          -8.125,
+          10.4140625
+        ],
+        [
+          -8.59375,
+          11.359375
+        ],
+        [
+          -9.21875,
+          13.71875
+        ],
+        [
+          -9.84375,
+          15.6015625
+        ],
+        [
+          -10.3125,
+          17.0234375
+        ],
+        [
+          -10.3125,
+          18.90625
+        ],
+        [
+          -11.5625,
+          21.734375
+        ],
+        [
+          -11.5625,
+          22.6796875
+        ],
+        [
+          -12.1875,
+          25.5078125
+        ],
+        [
+          -13.09375,
+          29.15625
+        ],
+        [
+          -13.5625,
+          31.046875
+        ],
+        [
+          -13.5625,
+          31.9921875
+        ],
+        [
+          -14.46875,
+          37.5234375
+        ],
+        [
+          -14.46875,
+          38.46875
+        ],
+        [
+          -14.46875,
+          44.8359375
+        ],
+        [
+          -15.09375,
+          46.71875
+        ],
+        [
+          -15.09375,
+          53.0859375
+        ],
+        [
+          -15.09375,
+          54.03125
+        ],
+        [
+          -15.09375,
+          59.453125
+        ],
+        [
+          -15.09375,
+          62.28125
+        ],
+        [
+          -15.09375,
+          64.1640625
+        ],
+        [
+          -15.09375,
+          72.296875
+        ],
+        [
+          -15.09375,
+          73.2421875
+        ],
+        [
+          -15.09375,
+          77.0078125
+        ],
+        [
+          -13.8046875,
+          86.0078125
+        ],
+        [
+          -13.8046875,
+          89.7734375
+        ],
+        [
+          -13.171875,
+          91.65625
+        ],
+        [
+          -12.0859375,
+          98.0234375
+        ],
+        [
+          -12.0859375,
+          98.96875
+        ],
+        [
+          -11.453125,
+          102.734375
+        ],
+        [
+          -11.453125,
+          103.6796875
+        ],
+        [
+          -9.890625,
+          110.046875
+        ],
+        [
+          -9.890625,
+          111.9296875
+        ],
+        [
+          -9.890625,
+          114.7578125
+        ],
+        [
+          -9.890625,
+          115.703125
+        ],
+        [
+          -8.0546875,
+          124.7734375
+        ],
+        [
+          -8.0546875,
+          125.71875
+        ],
+        [
+          -6.8515625,
+          136.5546875
+        ],
+        [
+          -6.8515625,
+          137.5
+        ],
+        [
+          -5.9375,
+          141.625
+        ],
+        [
+          -5.9375,
+          142.5703125
+        ],
+        [
+          -5.9375,
+          145.3984375
+        ],
+        [
+          -5.9375,
+          145.875
+        ],
+        [
+          -7.03125,
+          148.234375
+        ],
+        [
+          -7.5,
+          149.1796875
+        ],
+        [
+          -7.96875,
+          150.125
+        ],
+        [
+          -9.375,
+          151.546875
+        ],
+        [
+          -9.84375,
+          152.4921875
+        ],
+        [
+          -13.046875,
+          155.7109375
+        ],
+        [
+          -13.515625,
+          156.1875
+        ],
+        [
+          -14.921875,
+          157.609375
+        ],
+        [
+          -15.390625,
+          158.0859375
+        ],
+        [
+          -16.328125,
+          159.0390625
+        ],
+        [
+          -16.796875,
+          159.984375
+        ],
+        [
+          -17.265625,
+          160.4609375
+        ],
+        [
+          -17.265625,
+          161.40625
+        ],
+        [
+          -17.734375,
+          162.359375
+        ],
+        [
+          -17.734375,
+          162.8359375
+        ],
+        [
+          -17.734375,
+          163.3125
+        ],
+        [
+          -18.203125,
+          163.7890625
+        ],
+        [
+          -18.203125,
+          164.7421875
+        ],
+        [
+          -18.203125,
+          165.6953125
+        ],
+        [
+          -18.203125,
+          166.171875
+        ],
+        [
+          -17.7265625,
+          168.0625
+        ],
+        [
+          -17.7265625,
+          168.5390625
+        ],
+        [
+          -17.25,
+          169.9609375
+        ],
+        [
+          -17.25,
+          170.90625
+        ],
+        [
+          -16.7734375,
+          171.8515625
+        ],
+        [
+          -16.296875,
+          173.7421875
+        ],
+        [
+          -15.8203125,
+          174.6875
+        ],
+        [
+          -15.1875,
+          177.515625
+        ],
+        [
+          -14.7109375,
+          179.40625
+        ],
+        [
+          -14.078125,
+          183.171875
+        ],
+        [
+          -13.1640625,
+          188.703125
+        ],
+        [
+          -12.25,
+          192.3515625
+        ],
+        [
+          -12.25,
+          198.71875
+        ],
+        [
+          -11.6171875,
+          200.6015625
+        ],
+        [
+          -10.703125,
+          206.1328125
+        ],
+        [
+          -9.5,
+          213.3203125
+        ],
+        [
+          -9.5,
+          216.1484375
+        ],
+        [
+          -8.4140625,
+          221.5703125
+        ],
+        [
+          -8.4140625,
+          225.3359375
+        ],
+        [
+          -7.78125,
+          227.21875
+        ],
+        [
+          -7.1484375,
+          232.75
+        ],
+        [
+          -7.1484375,
+          236.3984375
+        ],
+        [
+          -6.234375,
+          243.6953125
+        ],
+        [
+          -6.234375,
+          244.640625
+        ],
+        [
+          -4.0625,
+          255.484375
+        ],
+        [
+          -2.7109375,
+          266.296875
+        ],
+        [
+          -1.796875,
+          273.59375
+        ],
+        [
+          -0.59375,
+          280.78125
+        ],
+        [
+          0.4921875,
+          289.8515625
+        ],
+        [
+          2.0546875,
+          299.8671875
+        ],
+        [
+          3.140625,
+          305.2890625
+        ],
+        [
+          3.7734375,
+          307.171875
+        ],
+        [
+          4.40625,
+          310.9375
+        ],
+        [
+          4.40625,
+          312.8203125
+        ],
+        [
+          5.3203125,
+          318.3515625
+        ],
+        [
+          5.3203125,
+          320.234375
+        ],
+        [
+          5.796875,
+          323.0625
+        ],
+        [
+          5.796875,
+          324.0078125
+        ],
+        [
+          6.4296875,
+          326.8359375
+        ],
+        [
+          7.0625,
+          328.71875
+        ],
+        [
+          7.6953125,
+          332.484375
+        ],
+        [
+          8.328125,
+          334.3671875
+        ],
+        [
+          8.328125,
+          334.84375
+        ],
+        [
+          8.9609375,
+          337.671875
+        ],
+        [
+          10.0703125,
+          340.5
+        ],
+        [
+          10.0703125,
+          341.4453125
+        ],
+        [
+          10.703125,
+          343.8046875
+        ],
+        [
+          11.3359375,
+          345.6875
+        ],
+        [
+          11.8125,
+          348.046875
+        ],
+        [
+          11.8125,
+          349.9296875
+        ],
+        [
+          12.2890625,
+          352.2890625
+        ],
+        [
+          12.765625,
+          354.65625
+        ],
+        [
+          12.765625,
+          355.1328125
+        ],
+        [
+          12.765625,
+          355.609375
+        ],
+        [
+          13.2421875,
+          356.0859375
+        ],
+        [
+          13.2421875,
+          357.0390625
+        ],
+        [
+          13.2421875,
+          357.515625
+        ],
+        [
+          13.2421875,
+          358.46875
+        ],
+        [
+          13.2421875,
+          358.9453125
+        ],
+        [
+          13.71875,
+          359.421875
+        ],
+        [
+          13.71875,
+          360.375
+        ],
+        [
+          13.71875,
+          360.8515625
+        ],
+        [
+          13.71875,
+          361.328125
+        ],
+        [
+          13.71875,
+          361.8046875
+        ],
+        [
+          13.71875,
+          362.28125
+        ],
+        [
+          13.71875,
+          362.7578125
+        ],
+        [
+          13.71875,
+          363.234375
+        ],
+        [
+          13.71875,
+          363.7109375
+        ],
+        [
+          13.71875,
+          363.7109375
+        ]
+      ],
+      "pressures": [],
+      "simulatePressure": true,
+      "strokeOptions": {
+        "variability": "constant",
+        "streamline": 0.5
+      }
+    },
+    {
+      "id": "X51QmUdhmBpD6E-f_Chmp",
+      "type": "text",
+      "x": 6389.692905970984,
+      "y": -1224.3728143601197,
+      "width": 642.3991088867188,
+      "height": 460,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dashed",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [
+        "KSpp_CR0GBiK2_TXJb6gl",
+        "9WHULQAzBHm5o5Hc-F6No"
+      ],
+      "frameId": null,
+      "index": "b5e8",
+      "roundness": null,
+      "seed": 1753448871,
+      "version": 1045,
+      "versionNonce": 1704605393,
+      "isDeleted": false,
+      "boundElements": [],
+      "updated": 1787886736448,
+      "link": null,
+      "locked": false,
+      "text": "文件级定位关系：\nSSTableFooter\n  |\n  +-- metric_index: absolute offset + size\n  |\n  +-- metric_index_root_page: relative offset inside metric index + size\n  |\n  +-- time range / lsn range / metric count / series count\n\nMetricIndex\n  |\n  +-- metric_name -> metric_block_absolute_offset + metric_block_size\n\nMetricBlock\n  |\n  +-- metric data pages\n  +-- metric footer\n\n最重要的不变量：\nMetric block offset 是文件绝对 offset。\nColumnMeta 内的 page offset 是相对当前 metric block 起点的 offset。\n读取列页时需要:\n  absolute_page_offset = metric_offset + column_meta.page_location.offset",
+      "fontSize": 16,
+      "fontFamily": 8,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "文件级定位关系：\nSSTableFooter\n  |\n  +-- metric_index: absolute offset + size\n  |\n  +-- metric_index_root_page: relative offset inside metric index + size\n  |\n  +-- time range / lsn range / metric count / series count\n\nMetricIndex\n  |\n  +-- metric_name -> metric_block_absolute_offset + metric_block_size\n\nMetricBlock\n  |\n  +-- metric data pages\n  +-- metric footer\n\n最重要的不变量：\nMetric block offset 是文件绝对 offset。\nColumnMeta 内的 page offset 是相对当前 metric block 起点的 offset。\n读取列页时需要:\n  absolute_page_offset = metric_offset + column_meta.page_location.offset",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "-hN5LKf1Cso_NECnaI60z",
+      "type": "image",
+      "x": 5459.8081287202385,
+      "y": -1685.0411551339287,
+      "width": 1440,
+      "height": 411,
+      "angle": 0,
+      "strokeColor": "transparent",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dashed",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [
+        "KSpp_CR0GBiK2_TXJb6gl",
+        "9WHULQAzBHm5o5Hc-F6No"
+      ],
+      "frameId": null,
+      "index": "b5eG",
+      "roundness": null,
+      "seed": 2037778449,
+      "version": 698,
+      "versionNonce": 23468735,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1787886736448,
+      "link": null,
+      "locked": false,
+      "status": "saved",
+      "fileId": "2f7d046fb71e46e6089e3455cbbd80e2c73b6bf9",
+      "scale": [
+        1,
+        1
+      ],
+      "crop": null
+    },
+    {
+      "id": "WU_Lq5_PTkt0QJX5voKAd",
+      "type": "text",
+      "x": 5463.402784075054,
+      "y": -1255.1410435267858,
+      "width": 554.3992309570312,
+      "height": 140,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dashed",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [
+        "KSpp_CR0GBiK2_TXJb6gl",
+        "9WHULQAzBHm5o5Hc-F6No"
+      ],
+      "frameId": null,
+      "index": "b5eV",
+      "roundness": null,
+      "seed": 1515600849,
+      "version": 1326,
+      "versionNonce": 1135424689,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1787886736448,
+      "link": null,
+      "locked": false,
+      "text": "Footer region\n+----------------------+--------+--------+----------+---------+\n| protobuf payload     | crc    | size   | version  | magic   |\n+----------------------+--------+--------+----------+---------+\n| variable bytes       | 4 B    | 4 B    | 1 B      | 4 B     |\n+----------------------+--------+--------+----------+---------+\n                       <------ FooterFixedSize = 13 B -------->",
+      "fontSize": 16,
+      "fontFamily": 8,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "Footer region\n+----------------------+--------+--------+----------+---------+\n| protobuf payload     | crc    | size   | version  | magic   |\n+----------------------+--------+--------+----------+---------+\n| variable bytes       | 4 B    | 4 B    | 1 B      | 4 B     |\n+----------------------+--------+--------+----------+---------+\n                       <------ FooterFixedSize = 13 B -------->",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "OoQHPWSHUtnTV5bYW3pcx",
+      "type": "text",
+      "x": 5465.583344474681,
+      "y": -1099.9332527281736,
+      "width": 677.5990600585938,
+      "height": 120,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dashed",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [
+        "KSpp_CR0GBiK2_TXJb6gl",
+        "9WHULQAzBHm5o5Hc-F6No"
+      ],
+      "frameId": null,
+      "index": "b5el",
+      "roundness": null,
+      "seed": 1084696881,
+      "version": 954,
+      "versionNonce": 7498463,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1787886736448,
+      "link": null,
+      "locked": false,
+      "text": "Page Structure A（Data / Dict / Bloom / PAX Page）\n+----------------+----------------+----------------------+------------------+\n| checksum       | header_length  | PageHeader protobuf  | compressed body  |\n+----------------+----------------+----------------------+------------------+\n| 4 B            | 4 B            | header_length bytes  | compressed_size  |\n+----------------+----------------+----------------------+------------------+",
+      "fontSize": 16,
+      "fontFamily": 8,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "Page Structure A（Data / Dict / Bloom / PAX Page）\n+----------------+----------------+----------------------+------------------+\n| checksum       | header_length  | PageHeader protobuf  | compressed body  |\n+----------------+----------------+----------------------+------------------+\n| 4 B            | 4 B            | header_length bytes  | compressed_size  |\n+----------------+----------------+----------------------+------------------+",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "i_mu4RYRgPz9eiFEkG0RU",
+      "type": "text",
+      "x": 5480.532440669935,
+      "y": -693.5929129464288,
+      "width": 545.5992431640625,
+      "height": 80,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dashed",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [
+        "KSpp_CR0GBiK2_TXJb6gl",
+        "9WHULQAzBHm5o5Hc-F6No"
+      ],
+      "frameId": null,
+      "index": "b5f",
+      "roundness": null,
+      "seed": 590595377,
+      "version": 146,
+      "versionNonce": 1181054609,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1787886736448,
+      "link": null,
+      "locked": false,
+      "text": "Page Structure B（MetricIndex / RowIdIndex Page）\n+-----------------+-----------------------+------------------+\n| compressed body | XxxPageFooter protobuf| PageCommonFooter |\n+-----------------+-----------------------+------------------+",
+      "fontSize": 16,
+      "fontFamily": 8,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "Page Structure B（MetricIndex / RowIdIndex Page）\n+-----------------+-----------------------+------------------+\n| compressed body | XxxPageFooter protobuf| PageCommonFooter |\n+-----------------+-----------------------+------------------+",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "uSYYa6KM-pTyCGfGA90c7",
+      "type": "text",
+      "x": 5868.13123914929,
+      "y": -587.5884486607156,
+      "width": 422.3994140625,
+      "height": 120,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dashed",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [
+        "KSpp_CR0GBiK2_TXJb6gl",
+        "9WHULQAzBHm5o5Hc-F6No"
+      ],
+      "frameId": null,
+      "index": "b5fG",
+      "roundness": null,
+      "seed": 1810173855,
+      "version": 139,
+      "versionNonce": 1438627583,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1787886736448,
+      "link": null,
+      "locked": false,
+      "text": "PageCommonFooter\n+----------+-------------+-----------+---------+\n| checksum | footer_size | page_type | version |\n+----------+-------------+-----------+---------+\n| 4 B      | 2 B         | 1 B       | 1 B     |\n+----------+-------------+-----------+---------+",
+      "fontSize": 16,
+      "fontFamily": 8,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "PageCommonFooter\n+----------+-------------+-----------+---------+\n| checksum | footer_size | page_type | version |\n+----------+-------------+-----------+---------+\n| 4 B      | 2 B         | 1 B       | 1 B     |\n+----------+-------------+-----------+---------+",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "HyaOKxF6waDx0dDlfJTyf",
+      "type": "text",
+      "x": 5774.774039616645,
+      "y": -962.9233010912722,
+      "width": 501.59930419921875,
+      "height": 240,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dashed",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [
+        "KSpp_CR0GBiK2_TXJb6gl",
+        "9WHULQAzBHm5o5Hc-F6No"
+      ],
+      "frameId": null,
+      "index": "b5fV",
+      "roundness": null,
+      "seed": 333515473,
+      "version": 75,
+      "versionNonce": 813333617,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1787886736448,
+      "link": null,
+      "locked": false,
+      "text": "PageHeader\n+-------------------+-----------------------------------+\n| field             | meaning                           |\n+-------------------+-----------------------------------+\n| page_type         | DATA / INDEX / DICTIONARY / PAX   |\n| uncompressed_size | body size before decompression    |\n| compressed_size   | body size after compression       |\n| compress_type     | compression algorithm             |\n| data_page_header  | sub header for DATA page          |\n| index_page_header | sub header for INDEX page         |\n| dict_page_header  | sub header for DICTIONARY page    |\n+-------------------+-----------------------------------+",
+      "fontSize": 16,
+      "fontFamily": 8,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "PageHeader\n+-------------------+-----------------------------------+\n| field             | meaning                           |\n+-------------------+-----------------------------------+\n| page_type         | DATA / INDEX / DICTIONARY / PAX   |\n| uncompressed_size | body size before decompression    |\n| compressed_size   | body size after compression       |\n| compress_type     | compression algorithm             |\n| data_page_header  | sub header for DATA page          |\n| index_page_header | sub header for INDEX page         |\n| dict_page_header  | sub header for DICTIONARY page    |\n+-------------------+-----------------------------------+",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "9ISOfE6KXvdKRp_jTKo0n",
+      "type": "line",
+      "x": 5466.722129216254,
+      "y": -1028.9545510912722,
+      "width": 81.2265625,
+      "height": 367.3984375,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dashed",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [
+        "9WHULQAzBHm5o5Hc-F6No"
+      ],
+      "frameId": null,
+      "index": "b5fl",
+      "roundness": {
+        "type": 2
+      },
+      "seed": 577270719,
+      "version": 357,
+      "versionNonce": 130973471,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1787886736448,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -66.8671875,
+          175.4375
+        ],
+        [
+          14.359375,
+          367.3984375
+        ]
+      ],
+      "startBinding": null,
+      "endBinding": null,
+      "startArrowhead": null,
+      "endArrowhead": null,
+      "polygon": false
+    },
+    {
+      "id": "TAyBA_FmigmItd8gslxtg",
+      "type": "frame",
+      "x": 5584.042441716254,
+      "y": -783.9779885912722,
+      "width": 1.421875,
+      "height": 0.9375,
+      "angle": 0,
+      "strokeColor": "#bbb",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b5g",
+      "roundness": null,
+      "seed": 1857857567,
+      "version": 4,
+      "versionNonce": 1911706015,
+      "isDeleted": true,
+      "boundElements": null,
+      "updated": 1787886722195,
+      "link": null,
+      "locked": false,
+      "name": null
+    },
+    {
+      "id": "ps1_lwWYgcIduWqE3LdMC",
+      "type": "arrow",
+      "x": 8149.7791777111215,
+      "y": -1062.9587125282978,
+      "width": 371.1713077605673,
+      "height": 761.5425597147855,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dashed",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b5h",
+      "roundness": {
+        "type": 2
+      },
+      "seed": 983089023,
+      "version": 316,
+      "versionNonce": 53073439,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1787887714781,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          371.1713077605673,
+          -761.5425597147855
+        ]
+      ],
+      "startBinding": {
+        "elementId": "YBCxstfKE79tfxp-75TKK",
+        "mode": "orbit",
+        "fixedPoint": [
+          0.8326703245580774,
+          0.8326703245580741
+        ]
+      },
+      "endBinding": {
+        "elementId": "SYyTB-_hY8EAVnmMSXUQO",
+        "mode": "orbit",
+        "fixedPoint": [
+          0.019853162731415203,
+          0.01985316273141456
+        ]
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "elbowed": false,
+      "moveMidPointsWithElement": false
+    },
+    {
+      "id": "izR7YwyeJJZnqe9NVyhQr",
+      "type": "arrow",
+      "x": 8149.779177711121,
+      "y": -1037.4479289343383,
+      "width": 347.1182008773403,
+      "height": 137.80487959362767,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dashed",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b5i",
+      "roundness": {
+        "type": 2
+      },
+      "seed": 1509976817,
+      "version": 279,
+      "versionNonce": 1786047249,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1787887768982,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          347.1182008773403,
+          137.80487959362767
+        ]
+      ],
+      "startBinding": {
+        "elementId": "YBCxstfKE79tfxp-75TKK",
+        "mode": "orbit",
+        "fixedPoint": [
+          0.8533193705420049,
+          0.1466806294579944
+        ]
+      },
+      "endBinding": {
+        "elementId": "lV32WBERuCryRQz56Qygt",
+        "mode": "orbit",
+        "fixedPoint": [
+          0.47283847294147097,
+          0.5271615270585286
+        ]
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "elbowed": false,
+      "moveMidPointsWithElement": false
+    },
+    {
+      "id": "YLpiag9KsFL3bxYARg1ll",
+      "type": "text",
+      "x": 7305.719352116645,
+      "y": -2225.743613591272,
+      "width": 501.59930419921875,
+      "height": 500,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dashed",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b5j",
+      "roundness": null,
+      "seed": 2092762289,
+      "version": 26,
+      "versionNonce": 419520223,
+      "isDeleted": true,
+      "boundElements": null,
+      "updated": 1787886866767,
+      "link": null,
+      "locked": false,
+      "text": "DataPageHeader\n+--------------------+----------------------------------+\n| field              | meaning                          |\n+--------------------+----------------------------------+\n| first_row_id       | first row id in this page        |\n| num_rows           | row count in this page           |\n| null_bitmap_size   | 0 means no null bitmap           |\n| real_encoding_type | effective page encoding          |\n+--------------------+----------------------------------+\n\nIndexPageHeader\n+-------------+------------------------+\n| field       | meaning                |\n+-------------+------------------------+\n| num_hashes  | bloom hash count       |\n| num_filters | filter meta count      |\n+-------------+------------------------+\n\nDictPageHeader\n+---------------+--------------------------+\n| field         | meaning                  |\n+---------------+--------------------------+\n| dict_encoding | dict value encoding      |\n| is_sorted     | whether values sorted    |\n+---------------+--------------------------+",
+      "fontSize": 16,
+      "fontFamily": 8,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "DataPageHeader\n+--------------------+----------------------------------+\n| field              | meaning                          |\n+--------------------+----------------------------------+\n| first_row_id       | first row id in this page        |\n| num_rows           | row count in this page           |\n| null_bitmap_size   | 0 means no null bitmap           |\n| real_encoding_type | effective page encoding          |\n+--------------------+----------------------------------+\n\nIndexPageHeader\n+-------------+------------------------+\n| field       | meaning                |\n+-------------+------------------------+\n| num_hashes  | bloom hash count       |\n| num_filters | filter meta count      |\n+-------------+------------------------+\n\nDictPageHeader\n+---------------+--------------------------+\n| field         | meaning                  |\n+---------------+--------------------------+\n| dict_encoding | dict value encoding      |\n| is_sorted     | whether values sorted    |\n+---------------+--------------------------+",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "eV3mqGAbcyKSrciDTx3xS",
+      "type": "text",
+      "x": 9632.266227116645,
+      "y": -2126.243613591272,
+      "width": 501.59930419921875,
+      "height": 180,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dashed",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b5k",
+      "roundness": null,
+      "seed": 1479570207,
+      "version": 286,
+      "versionNonce": 2128408575,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1787887784665,
+      "link": null,
+      "locked": false,
+      "text": "DataPageHeader\n+--------------------+----------------------------------+\n| field              | meaning                          |\n+--------------------+----------------------------------+\n| first_row_id       | first row id in this page        |\n| num_rows           | row count in this page           |\n| null_bitmap_size   | 0 means no null bitmap           |\n| real_encoding_type | effective page encoding          |\n+--------------------+----------------------------------+",
+      "fontSize": 16,
+      "fontFamily": 8,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "DataPageHeader\n+--------------------+----------------------------------+\n| field              | meaning                          |\n+--------------------+----------------------------------+\n| first_row_id       | first row id in this page        |\n| num_rows           | row count in this page           |\n| null_bitmap_size   | 0 means no null bitmap           |\n| real_encoding_type | effective page encoding          |\n+--------------------+----------------------------------+",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "iLcR673Qz3K5Tw7egMZIZ",
+      "type": "text",
+      "x": 9632.433310856879,
+      "y": -1418.7358010912722,
+      "width": 351.99951171875,
+      "height": 140,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dashed",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b5l",
+      "roundness": null,
+      "seed": 595948049,
+      "version": 417,
+      "versionNonce": 594609777,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1787887792384,
+      "link": null,
+      "locked": false,
+      "text": "IndexPageHeader （Bloom）\n+-------------+------------------------+\n| field       | meaning                |\n+-------------+------------------------+\n| num_hashes  | bloom hash count       |\n| num_filters | filter meta count      |\n+-------------+------------------------+",
+      "fontSize": 16,
+      "fontFamily": 8,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "IndexPageHeader （Bloom）\n+-------------+------------------------+\n| field       | meaning                |\n+-------------+------------------------+\n| num_hashes  | bloom hash count       |\n| num_filters | filter meta count      |\n+-------------+------------------------+",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "hpJId8iPMT9Wcd98cznzH",
+      "type": "text",
+      "x": 9628.911460270941,
+      "y": -2540.618613591272,
+      "width": 387.199462890625,
+      "height": 140,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dashed",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b5m",
+      "roundness": null,
+      "seed": 2034868159,
+      "version": 237,
+      "versionNonce": 2096231679,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1787887778866,
+      "link": null,
+      "locked": false,
+      "text": "DictPageHeader\n+---------------+--------------------------+\n| field         | meaning                  |\n+---------------+--------------------------+\n| dict_encoding | dict value encoding      |\n| is_sorted     | whether values sorted    |\n+---------------+--------------------------+",
+      "fontSize": 16,
+      "fontFamily": 8,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "DictPageHeader\n+---------------+--------------------------+\n| field         | meaning                  |\n+---------------+--------------------------+\n| dict_encoding | dict value encoding      |\n| is_sorted     | whether values sorted    |\n+---------------+--------------------------+",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "BjBK-bCJYzGqex3345h0r",
+      "type": "text",
+      "x": 9106.52394806391,
+      "y": -1846.8686135912722,
+      "width": 369.5994873046875,
+      "height": 280,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dashed",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b5n",
+      "roundness": null,
+      "seed": 1938090591,
+      "version": 159,
+      "versionNonce": 1273883839,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1787887064375,
+      "link": null,
+      "locked": false,
+      "text": "Column physical layout inside Metric Block\n+-----------------------------+\n| optional Dictionary Page    |\n+-----------------------------+\n| Data Page #0                |\n+-----------------------------+\n| Data Page #1                |\n+-----------------------------+\n| ...                         |\n+-----------------------------+\n| optional RowIdIndex Page    |\n+-----------------------------+\n| optional BloomFilter Page   |\n+-----------------------------+",
+      "fontSize": 16,
+      "fontFamily": 8,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "Column physical layout inside Metric Block\n+-----------------------------+\n| optional Dictionary Page    |\n+-----------------------------+\n| Data Page #0                |\n+-----------------------------+\n| Data Page #1                |\n+-----------------------------+\n| ...                         |\n+-----------------------------+\n| optional RowIdIndex Page    |\n+-----------------------------+\n| optional BloomFilter Page   |\n+-----------------------------+",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "tfBZH2NITc60QpWQpxJkZ",
+      "type": "arrow",
+      "x": 7709.284629216254,
+      "y": -912.7201760912722,
+      "width": 94.4765625,
+      "height": 308.6875,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dashed",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b5o",
+      "roundness": {
+        "type": 2
+      },
+      "seed": 1420310239,
+      "version": 291,
+      "versionNonce": 660915487,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1787887045158,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -84.0703125,
+          235.65625
+        ],
+        [
+          10.40625,
+          308.6875
+        ]
+      ],
+      "startBinding": {
+        "elementId": "YBCxstfKE79tfxp-75TKK",
+        "mode": "inside",
+        "fixedPoint": [
+          0.011374654763882386,
+          0.7822355401578951
+        ]
+      },
+      "endBinding": {
+        "elementId": "ZQtcF28MyIf8cNy4AUknk",
+        "mode": "inside",
+        "fixedPoint": [
+          0.002717678457838144,
+          0.2981350584215174
+        ]
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "elbowed": false,
+      "moveMidPointsWithElement": false
+    },
+    {
+      "id": "Zw2WQlBO0e22y9qbvGG9l",
+      "type": "arrow",
+      "x": 8260.531286814843,
+      "y": -534.2156736207295,
+      "width": 78.7087838309144,
+      "height": 5.1256523849183395,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dashed",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b5p",
+      "roundness": {
+        "type": 2
+      },
+      "seed": 2129888863,
+      "version": 547,
+      "versionNonce": 294917407,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1787887050492,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          78.7087838309144,
+          -5.1256523849183395
+        ]
+      ],
+      "startBinding": {
+        "elementId": "ZQtcF28MyIf8cNy4AUknk",
+        "mode": "orbit",
+        "fixedPoint": [
+          0.7387363997442844,
+          0.7387363997442802
+        ]
+      },
+      "endBinding": {
+        "elementId": "FHAsk_wv9kDItgGoa3z9V",
+        "mode": "orbit",
+        "fixedPoint": [
+          0,
+          0.5001
+        ]
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "elbowed": false,
+      "moveMidPointsWithElement": false
+    },
+    {
+      "id": "MZnDUFcCwAd_VLsa6fKwf",
+      "type": "text",
+      "x": 8625.299125065863,
+      "y": -631.9467385912722,
+      "width": 624.7991333007812,
+      "height": 280,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dashed",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b5q",
+      "roundness": null,
+      "seed": 756934929,
+      "version": 177,
+      "versionNonce": 1457590719,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "-oYeialU70_AbdOmoymsW",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1787887052674,
+      "link": null,
+      "locked": false,
+      "text": "ColumnMeta\n+--------------------+------------------------------------------------+\n| field              | meaning                                        |\n+--------------------+------------------------------------------------+\n| schema             | name / category / type / nullable              |\n| encoding_type      | BINARY_RAW / DICT / BITSHUFFLE                 |\n| num_page           | data page count                                |\n| dict_page          | dictionary page relative offset + size         |\n| full_dict_encoding | whether all data pages use dict encoding       |\n| rowid_index_meta   | row id index page or single data page location |\n| has_null           | whether this column contains null values       |\n| bloom_filter_page  | bloom filter page location for tag column      |\n| dict_size          | dictionary entry count                         |\n+--------------------+------------------------------------------------+",
+      "fontSize": 16,
+      "fontFamily": 8,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "ColumnMeta\n+--------------------+------------------------------------------------+\n| field              | meaning                                        |\n+--------------------+------------------------------------------------+\n| schema             | name / category / type / nullable              |\n| encoding_type      | BINARY_RAW / DICT / BITSHUFFLE                 |\n| num_page           | data page count                                |\n| dict_page          | dictionary page relative offset + size         |\n| full_dict_encoding | whether all data pages use dict encoding       |\n| rowid_index_meta   | row id index page or single data page location |\n| has_null           | whether this column contains null values       |\n| bloom_filter_page  | bloom filter page location for tag column      |\n| dict_size          | dictionary entry count                         |\n+--------------------+------------------------------------------------+",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "-oYeialU70_AbdOmoymsW",
+      "type": "arrow",
+      "x": 8579.039753262945,
+      "y": -566.018673041617,
+      "width": 40.759371802918395,
+      "height": 33.11166030410686,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dashed",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b5r",
+      "roundness": {
+        "type": 2
+      },
+      "seed": 425231743,
+      "version": 469,
+      "versionNonce": 2037809631,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1787887052674,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          40.759371802918395,
+          -33.11166030410686
+        ]
+      ],
+      "startBinding": {
+        "elementId": "FHAsk_wv9kDItgGoa3z9V",
+        "mode": "orbit",
+        "fixedPoint": [
+          0.7324379866240952,
+          0.7324379866240947
+        ]
+      },
+      "endBinding": {
+        "elementId": "MZnDUFcCwAd_VLsa6fKwf",
+        "mode": "orbit",
+        "fixedPoint": [
+          0.035994845711779695,
+          0.035994845711774866
+        ]
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "elbowed": false,
+      "moveMidPointsWithElement": false
+    },
+    {
+      "id": "BmOwhSGGXxK8wRq_NbpOC",
+      "type": "text",
+      "x": 9631.948874821723,
+      "y": -1821.7045510912722,
+      "width": 263.9996337890625,
+      "height": 160,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dashed",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b5s",
+      "roundness": null,
+      "seed": 792245311,
+      "version": 153,
+      "versionNonce": 1104274225,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1787887791018,
+      "link": null,
+      "locked": false,
+      "text": "RowIdIndex Page\n+----------------------------+\n| compressed RowIdIndexEntry |\n+----------------------------+\n| RowIdIndexPageFooter pb    |\n+----------------------------+\n| PageCommonFooter           |\n+----------------------------+",
+      "fontSize": 16,
+      "fontFamily": 8,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "RowIdIndex Page\n+----------------------------+\n| compressed RowIdIndexEntry |\n+----------------------------+\n| RowIdIndexPageFooter pb    |\n+----------------------------+\n| PageCommonFooter           |\n+----------------------------+",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "q5p3doxunqKCdECHOCosq",
+      "type": "text",
+      "x": 10092.19744049555,
+      "y": -1619.9389260912722,
+      "width": 448.79937744140625,
+      "height": 120,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dashed",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b5t",
+      "roundness": null,
+      "seed": 896172735,
+      "version": 201,
+      "versionNonce": 1263141183,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1787887778866,
+      "link": null,
+      "locked": false,
+      "text": "RowIdIndexPageFooter\n+-------------+---------------+-------------------+\n| base_offset | compress_type | uncompressed_size |\n+-------------+---------------+-------------------+\n| uint64      | uint32        | uint32            |\n+-------------+---------------+-------------------+",
+      "fontSize": 16,
+      "fontFamily": 8,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "RowIdIndexPageFooter\n+-------------+---------------+-------------------+\n| base_offset | compress_type | uncompressed_size |\n+-------------+---------------+-------------------+\n| uint64      | uint32        | uint32            |\n+-------------+---------------+-------------------+",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "Ulv1m7hwwgpAPEnlyJ0DE",
+      "type": "text",
+      "x": 10080.269004216254,
+      "y": -1828.3139260912722,
+      "width": 457.599365234375,
+      "height": 160,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dashed",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b5u",
+      "roundness": null,
+      "seed": 905094047,
+      "version": 155,
+      "versionNonce": 1645576543,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1787887778866,
+      "link": null,
+      "locked": false,
+      "text": "RowIdIndex\n+----------------+----------------+----------------+\n| page_end_row   | page_offset    | page_size      |\n+----------------+----------------+----------------+\n| 8191           | 1024           | 65536          |\n| 16383          | 66560          | 64220          |\n| 24575          | 130780         | 65888          |\n+----------------+----------------+----------------+",
+      "fontSize": 16,
+      "fontFamily": 8,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "RowIdIndex\n+----------------+----------------+----------------+\n| page_end_row   | page_offset    | page_size      |\n+----------------+----------------+----------------+\n| 8191           | 1024           | 65536          |\n| 16383          | 66560          | 64220          |\n| 24575          | 130780         | 65888          |\n+----------------+----------------+----------------+",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "QTDPW_V3tdHvvuAUQ4ymX",
+      "type": "text",
+      "x": 9635.156791081488,
+      "y": -1262.0404885912722,
+      "width": 413.59942626953125,
+      "height": 120,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dashed",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b5v",
+      "roundness": null,
+      "seed": 1979258385,
+      "version": 167,
+      "versionNonce": 1092951441,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1787887793282,
+      "link": null,
+      "locked": false,
+      "text": "Bloom payload\n+----------------------+----------------------+\n| filter bit arrays    | BloomFilterPageMeta  |\n+----------------------+----------------------+\n| aligned bytes        | one meta per page    |\n+----------------------+----------------------+",
+      "fontSize": 16,
+      "fontFamily": 8,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "Bloom payload\n+----------------------+----------------------+\n| filter bit arrays    | BloomFilterPageMeta  |\n+----------------------+----------------------+\n| aligned bytes        | one meta per page    |\n+----------------------+----------------------+",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "ijWnvKDOZUI8YMYV-lwb1",
+      "type": "text",
+      "x": 10129.070884099066,
+      "y": -1229.3139260912722,
+      "width": 626.3993530273438,
+      "height": 80,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dashed",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b5w",
+      "roundness": null,
+      "seed": 562458207,
+      "version": 149,
+      "versionNonce": 1213143505,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1787887794865,
+      "link": null,
+      "locked": false,
+      "text": "每个 `BloomFilterPageMeta` 记录一个 data page 的 row 范围和 filter offset\n+----------------+----------------+----------------+\n| start_row      | end_row        | filter_offset  |\n+----------------+----------------+----------------+",
+      "fontSize": 16,
+      "fontFamily": 8,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "每个 `BloomFilterPageMeta` 记录一个 data page 的 row 范围和 filter offset\n+----------------+----------------+----------------+\n| start_row      | end_row        | filter_offset  |\n+----------------+----------------+----------------+",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "J_MVcHFo0A-fEedsRwU6V",
+      "type": "text",
+      "x": 8533.31920563227,
+      "y": -2447.876426091272,
+      "width": 290.39959716796875,
+      "height": 480,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dashed",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b5x",
+      "roundness": null,
+      "seed": 855408319,
+      "version": 211,
+      "versionNonce": 768414271,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "XuuPpNcaF8T64ckVUs1WI",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1787887711390,
+      "link": null,
+      "locked": false,
+      "text": "Column Layout Metric Block\n\nmetric_offset\n  |\n  v\n+-------------------------------+\n| SG0 Column0 Dict Page         |\n+-------------------------------+\n| SG0 Column0 Data Page #0      |\n+-------------------------------+\n| SG0 Column0 Data Page #1      |\n+-------------------------------+\n| SG0 Column0 RowIdIndex Page   |\n+-------------------------------+\n| SG0 Column0 BloomFilter Page  |\n+-------------------------------+\n| SG0 Column1 ...               |\n+-------------------------------+\n| SG1 Column0 ...               |\n+-------------------------------+\n| MetricFooter protobuf         |\n+-------------------------------+\n| crc + size + version + magic  |\n+-------------------------------+",
+      "fontSize": 16,
+      "fontFamily": 8,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "Column Layout Metric Block\n\nmetric_offset\n  |\n  v\n+-------------------------------+\n| SG0 Column0 Dict Page         |\n+-------------------------------+\n| SG0 Column0 Data Page #0      |\n+-------------------------------+\n| SG0 Column0 Data Page #1      |\n+-------------------------------+\n| SG0 Column0 RowIdIndex Page   |\n+-------------------------------+\n| SG0 Column0 BloomFilter Page  |\n+-------------------------------+\n| SG0 Column1 ...               |\n+-------------------------------+\n| SG1 Column0 ...               |\n+-------------------------------+\n| MetricFooter protobuf         |\n+-------------------------------+\n| crc + size + version + magic  |\n+-------------------------------+",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "XuuPpNcaF8T64ckVUs1WI",
+      "type": "arrow",
+      "x": 8527.964316716254,
+      "y": -1846.7279885912722,
+      "width": 153.0078125,
+      "height": 587.9430312043419,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dashed",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b5y",
+      "roundness": {
+        "type": 2
+      },
+      "seed": 544383793,
+      "version": 344,
+      "versionNonce": 1021819455,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "type": "text",
+          "id": "O3o3ffsireoqwE2TKxRML"
+        }
+      ],
+      "updated": 1787887714781,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -153.0078125,
+          -332.7578125
+        ],
+        [
+          -0.145111083984375,
+          -587.9430312043419
+        ]
+      ],
+      "startBinding": {
+        "elementId": "SYyTB-_hY8EAVnmMSXUQO",
+        "mode": "inside",
+        "fixedPoint": [
+          0.0038228114760055945,
+          0.03426468460647117
+        ]
+      },
+      "endBinding": {
+        "elementId": "J_MVcHFo0A-fEedsRwU6V",
+        "mode": "orbit",
+        "fixedPoint": [
+          0.004170709848901272,
+          0.004170709848902258
+        ]
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "elbowed": false,
+      "moveMidPointsWithElement": false
+    },
+    {
+      "id": "O3o3ffsireoqwE2TKxRML",
+      "type": "text",
+      "x": 8322.156577458441,
+      "y": -2189.485801091272,
+      "width": 105.599853515625,
+      "height": 20,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dashed",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b5z",
+      "roundness": null,
+      "seed": 1706450911,
+      "version": 14,
+      "versionNonce": 778080209,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1787887703798,
+      "link": null,
+      "locked": false,
+      "text": "Another View",
+      "fontSize": 16,
+      "fontFamily": 8,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "XuuPpNcaF8T64ckVUs1WI",
+      "originalText": "Another View",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "l7X29vV-4T_TbXeNo27wr",
+      "type": "text",
+      "x": 9023.74611603266,
+      "y": -935.8451760912722,
+      "width": 791.9989013671875,
+      "height": 160,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dashed",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b60",
+      "roundness": null,
+      "seed": 1391489759,
+      "version": 115,
+      "versionNonce": 822990463,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1787887782682,
+      "link": null,
+      "locked": false,
+      "text": "PAX uncompressed body\n+-------------------------------+------------------+------------------+------------------+\n| column offset array           | column 0 payload | column 1 payload | column N payload |\n+-------------------------------+------------------+------------------+------------------+\n| uint32_t offsets[N + 1]       | variable         | variable         | variable         |\n+-------------------------------+------------------+------------------+------------------+\ncolumn i payload:\n  body[offsets[i] : offsets[i + 1]]",
+      "fontSize": 16,
+      "fontFamily": 8,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "PAX uncompressed body\n+-------------------------------+------------------+------------------+------------------+\n| column offset array           | column 0 payload | column 1 payload | column N payload |\n+-------------------------------+------------------+------------------+------------------+\n| uint32_t offsets[N + 1]       | variable         | variable         | variable         |\n+-------------------------------+------------------+------------------+------------------+\ncolumn i payload:\n  body[offsets[i] : offsets[i + 1]]",
       "autoResize": true,
       "lineHeight": 1.25
     }
